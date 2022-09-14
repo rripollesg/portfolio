@@ -255,6 +255,16 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid #149ddd;
 }
 
+
+@media (min-width: 1px){
+#hero .btn-get-started .fa-arrow-down {
+  padding-top: 200px;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+  padding-left: 150px;
+}
+}
+
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
