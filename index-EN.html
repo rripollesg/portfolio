@@ -6,8 +6,19 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Curriculum Vitae</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <meta content="Curriculum, vitae, consultor, QA, tester,implantador" name="keywords">
+  <meta name="description" content="Curriculum Vitae">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="lang" content="en-US">
+  <meta content="global" name="curriculum">
+  <meta name="Author" content="Raul Ripollés">
+  <link rel="alternate" href="https://rripollesg.github.io/portfolio/index-EN.html">
+  <link rel="shortlink" href="https://bit.ly/3xUF2cu">
+  <meta property="og:url" content="https://rripollesg.github.io/portfolio/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Curriculum Vitae">
+  <meta name="Distribution" content="global">
+  <!--<meta name="Robots" content="all"/>-->
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -19,7 +30,7 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet preload">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -95,7 +106,7 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Work experience</span></a></li>
           <li><a href="CV Raul Ripolles Garcia EN.pdf"><i class="bx bx-arrow-to-bottom"></i> Download CV</a></li>
-          <li><a href="index.html"><img src="assets/img/EN.png">&nbsp;Spanish</a></li>
+          <li><a href="index.html"><img src="assets/img/ES.png" alt="spanish">&nbsp;Spanish</a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -536,164 +547,15 @@
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js" defer></script>
 
 <!--version-->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/4.0.6/sweetalert2.min.js"></script>
-	<script>
-function version() {
 
-  swal({
-    title: 'Version',
-    text: 'Mensaje de texto',
-    html: '<p>* Portfolio - v3.9.0</p>\n<p>* Template URL: https://rripollesg.github.io/portfolio</p>\n * Author: Raul Ripolles',
-  });
-}
-console.log("* Template Name: Portfolio - v3.9.0\n* Template URL: https://rripollesg.github.io/porfolio\n* Author: Raul Ripolles")
-</script>
 <!--Canvas-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA==" crossorigin="anonymous"></script>
-<script>
-let resizeReset = function() {
-	w = canvasBody.width = window.innerWidth;
-	h = canvasBody.height = window.innerHeight;
-}
-
-const opts = {
-	particleColor: "rgb(200,200,200)",
-	lineColor: "rgb(200,200,200)",
-	particleAmount: 30,
-	defaultSpeed: 1,
-	variantSpeed: 1,
-	defaultRadius: 2,
-	variantRadius: 2,
-	linkRadius: 200,
-};
-
-window.addEventListener("resize", function(){
-	deBouncer();
-});
-
-let deBouncer = function() {
-    clearTimeout(tid);
-    tid = setTimeout(function() {
-        resizeReset();
-    }, delay);
-};
-
-let checkDistance = function(x1, y1, x2, y2){
-	return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-};
-
-let linkPoints = function(point1, hubs){
-	for (let i = 0; i < hubs.length; i++) {
-		let distance = checkDistance(point1.x, point1.y, hubs[i].x, hubs[i].y);
-		let opacity = 1 - distance / opts.linkRadius;
-		if (opacity > 0) {
-			drawArea.lineWidth = 0.5;
-			drawArea.strokeStyle = `rgba(${rgb[0]}, ${rgb[1]}, ${rgb[2]}, ${opacity})`;
-			drawArea.beginPath();
-			drawArea.moveTo(point1.x, point1.y);
-			drawArea.lineTo(hubs[i].x, hubs[i].y);
-			drawArea.closePath();
-			drawArea.stroke();
-		}
-	}
-}
-
-Particle = function(xPos, yPos){
-	this.x = Math.random() * w;
-	this.y = Math.random() * h;
-	this.speed = opts.defaultSpeed + Math.random() * opts.variantSpeed;
-	this.directionAngle = Math.floor(Math.random() * 360);
-	this.color = opts.particleColor;
-	this.radius = opts.defaultRadius + Math.random() * opts. variantRadius;
-	this.vector = {
-		x: Math.cos(this.directionAngle) * this.speed,
-		y: Math.sin(this.directionAngle) * this.speed
-	};
-	this.update = function(){
-		this.border();
-		this.x += this.vector.x;
-		this.y += this.vector.y;
-	};
-	this.border = function(){
-		if (this.x >= w || this.x <= 0) {
-			this.vector.x *= -1;
-		}
-		if (this.y >= h || this.y <= 0) {
-			this.vector.y *= -1;
-		}
-		if (this.x > w) this.x = w;
-		if (this.y > h) this.y = h;
-		if (this.x < 0) this.x = 0;
-		if (this.y < 0) this.y = 0;
-	};
-	this.draw = function(){
-		drawArea.beginPath();
-		drawArea.arc(this.x, this.y, this.radius, 0, Math.PI*2);
-		drawArea.closePath();
-		drawArea.fillStyle = this.color;
-		drawArea.fill();
-	};
-};
-
-function setup(){
-	particles = [];
-	resizeReset();
-	for (let i = 0; i < opts.particleAmount; i++){
-		particles.push( new Particle() );
-	}
-	window.requestAnimationFrame(loop);
-}
-
-function loop(){
-	window.requestAnimationFrame(loop);
-	drawArea.clearRect(0,0,w,h);
-	for (let i = 0; i < particles.length; i++){
-		particles[i].update();
-		particles[i].draw();
-	}
-	for (let i = 0; i < particles.length; i++){
-		linkPoints(particles[i], particles);
-	}
-}
-
-const canvasBody = document.getElementById("canvas"),
-drawArea = canvasBody.getContext("2d");
-let delay = 200, tid,
-rgb = opts.lineColor.match(/\d+/g);
-resizeReset();
-setup();
-</script>
-<!---------------------------------------------------------------
-# Slider
--------------------------------------------------------------->
-<!-- <script> -->
-    <!-- $(document).ready(function(){ -->
-    <!-- $('.customer-logos').slick({ -->
-        <!-- slidesToShow: 4, -->
-        <!-- slidesToScroll: 1, -->
-        <!-- autoplay: true, -->
-        <!-- autoplaySpeed: 1500, -->
-        <!-- arrows: false, -->
-        <!-- dots: false, -->
-        <!-- pauseOnHover: false, -->
-        <!-- responsive: [{ -->
-            <!-- breakpoint: 768, -->
-            <!-- settings: { -->
-                <!-- slidesToShow: 4 -->
-            <!-- } -->
-        <!-- }, { -->
-            <!-- breakpoint: 520, -->
-            <!-- settings: { -->
-                <!-- slidesToShow: 3 -->
-            <!-- } -->
-        <!-- }] -->
-    <!-- }); -->
-<!-- }); -->
-<!-- </script> -->
+<script src="assets/js/index.js" defer></script>
 </body>
 
 </html>
