@@ -511,6 +511,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  border-radius: 15px;
 }
 
 .resume .resume-item ul {
