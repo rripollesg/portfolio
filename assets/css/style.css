@@ -539,6 +539,15 @@ section {
   border: 2px solid #1f5297;
 }
 
+.resume .resume-item li.aptitudes{
+  font-size: 12px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 /*-----------Pills-------------------*/
 .resume .nav-pills {
   border-bottom: 1px solid rgba(72, 86, 100), 0.2);
