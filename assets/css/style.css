@@ -295,7 +295,7 @@ h6 {
 
 @media (min-width: 1px){
 #hero .btn-get-started .fa-arrow-down {
-  padding-top: 200px;
+  padding-top: 500px;
   -webkit-animation: pulse 2s infinite;
   animation: pulse 2s infinite;
   padding-left: 150px;
