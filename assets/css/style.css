@@ -293,7 +293,7 @@ h6 {
   color: #007bff;
 }
 
-@media (min-width: 1px){
+@media (min-width: 640px){
 #hero .btn-get-started .fa-arrow-down {
   padding-top: 500px;
   -webkit-animation: pulse 2s infinite;
