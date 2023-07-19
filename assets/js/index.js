@@ -137,7 +137,7 @@ window.onload = function () {
    
    if (ln == 'en-EN' && ln == 'en-GB' && !pagActual.includes("index-EN")) {
        window.location.href = 'index-EN.html';  
-   } else if (ln == 'es-ES' && !pagActual.includes("index")) {
+   } else if (ln == 'es' && !pagActual.includes("index")) {
        window.location.href = 'index.html';
    } else{
      console.log("Otro idioma");
