@@ -128,9 +128,21 @@ setup();
 /*<!---------------------------------------------------------------
 # Fichero segun idioma navegador
 -------------------------------------------------------------->*/
-/*if (navigator.language.substr(0, 2) === 'en') {
-    window.location.href = 'index-EN.html';
-}*/
+window.onload = function () {
+
+   var ln = navigator.language || navigator.userLanguage;
+   /*Validar que no se encuentre en la pagina correspondiente a su idioma*/
+   let pagActual = window.location.pathname;
+   
+   
+   if (ln == 'en-EN' && ln == 'en-GB' && !pagActual.includes("index-EN")) {
+       window.location.href = 'index-EN.html';  
+   } else if (ln == 'es-ES' && !pagActual.includes("index")) {
+       window.location.href = 'index.html';
+   } else{
+     console.log("Otro idioma");
+   }
+}
 /*<!---------------------------------------------------------------
 # Slider
 -------------------------------------------------------------->
