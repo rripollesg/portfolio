@@ -17,6 +17,7 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         '/',
         '/index.html',
+        '/index-EN.html',
         '/assets/css/style.css',
         '/assets/js/main.js',
         '/assets/js/index.js',
