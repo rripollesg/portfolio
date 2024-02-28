@@ -1,3 +1,15 @@
+ if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado con éxito:', registration);
+        })
+        .catch(function(error) {
+          console.log('Error al registrar el Service Worker:', error);
+        });
+    });
+  }
+
 self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open('cache01').then(function(cache) {
@@ -5,7 +17,8 @@ self.addEventListener('install', function(event) {
         './',
         'index.html',
         'style.css',
-        'logo.png',
+        'profile3-img.jpg',
+        'favicon.png',
         'index-EN.html',
         '/assets/css/style.css',
         '/assets/js/main.js',
