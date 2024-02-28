@@ -225,7 +225,6 @@ h6 {
 /*--------------------------------------------------------------
 # Hero Section url("../img/hero-bg.jpg") top center
 --------------------------------------------------------------*/
-
 #hero {
   position:relative;
   width: 100%;
@@ -352,7 +351,6 @@ canvas {
   height: 100%;
   z-index: 2; /* Ajusta el z-index según sea necesario, debe ser mayor que el del contenedorcanvas */
 }
-
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
