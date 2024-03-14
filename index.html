@@ -46,33 +46,8 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
 	
 	<!--Canvas inicio-->
-	<style type="text/css">
-	#canvas {
-	position: absolute;
-	display: block;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	}
-	</style>
- <script src="assets/js/tagcanvas.min.js" type="text/javascript"></script>
-
-  <script type="text/javascript">
-      window.onload = function() {
-        try {
-          TagCanvas.Start('myCanvas','tags',{
-            textColour: '#000000',
-            outlineColour: '#f5f8fd',
-            reverse: true,
-            depth: 0.8,
-            maxSpeed: 0.05
-          });
-        } catch(e) {
-          // something went wrong, hide the canvas container
-          document.getElementById('myCanvasContainer').style.display = 'none';
-        }
-      };
-    </script>
+	
+  
   <!-- =======================================================
   * Template Name: Portfolio -  v3.9.0
   * Template URL: https://cvraulripolles.tk
@@ -574,53 +549,82 @@
           <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
         </div>
         <div class="row skills-content">
-		<!-- <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script> -->
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script> -->
-	<!-- <section class="customer-logos slider"> -->
-      <!-- <div class="slide"><a href="https://www.docker.com/"><i class="devicon-docker-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://getbootstrap.com/"><i class="devicon-bootstrap-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://www.atlassian.com/es/software/confluence"><i class="devicon-confluence-original-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://developer.mozilla.org/es/docs/Web/CSS"><i class="devicon-css3-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://git-scm.com/"><i class="devicon-git-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://developer.mozilla.org/es/docs/Glossary/HTML5"><i class="devicon-html5-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://www.mongodb.com/"><i class="devicon-mongodb-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-	  <!-- <div class="slide"><a href="https://code.visualstudio.com/"><i class="devicon-vscode-plain colored" style="Font-size:3rem"></i></a></div> -->
-	  <!-- <div class="slide"><a href="https://ubuntu.com/download"><i class="devicon-ubuntu-plain colored" style="Font-size:3rem"></i></a></div> -->
-	  <!-- <div class="slide"><a href="https://www.php.net/manual/es/intro-whatis.php"><i class="devicon-php-plain colored" style="Font-size:3rem"></i></a></div> -->
-	  <!-- <div class="slide"><a href="https://www.mysql.com/"><i class="devicon-mysql-plain-wordmark" style="Font-size:3rem"></i></a></div> -->
-	  <!-- <div class="slide"><a href="https://www.atlassian.com/es/software/jira"><i class="devicon-jira-plain-wordmark colored" style="Font-size:3rem"></i></a></div> -->
-      <!-- <div class="slide"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><i class="devicon-javascript-plain colored" style="Font-size:3rem"></i></a></div> -->
-     
    <!-- </section> -->
           <div class="col-lg-6" data-aos="fade-up">
 
             <div class="panel-box">
-		   <div id="myCanvasContainer">
-      <canvas width="300" height="200" id="myCanvas">
-        <p>Anything in here will be replaced on browsers that support the canvas element</p>
-      </canvas>
-    </div>
-    <div id="tags">
-      <ul>
-        <li><a href="#" target="_blank">HTML5</a></li>
-        <li><a href="#">Microsoft office</a></li>
-        <li><a href="#">criptografía</a></li>
-        <li><a href="#">estenografia</a></li>
-        <li><a href="#">hash</a></li>
-		<li><a href="#">PHP</a></li>
-		<li><a href="#">CSS</a></li>
-		<li><a href="#">SQL</a></li>
-		<li><a href="#">joomla</a></li>
-		<li><a href="#">wordpress</a></li>
-		<li><a href="#">dreamweaver</a></li>
-		<li><a href="#">moodle</a></li>
-		<li><a href="#">Linux</a></li>
-		<li><a href="#">CISCO</a></li>
-		<li><a href="#">EHR</a></li>
-		<li><a href="#">POWER BI</a></li>
-		<li><a href="#">Sistemas Sanitarios</a></li>
-      </ul>
-    </div></div>
+		 <div class="tab-menu">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs" id="mytab" role="tablist">
+			<li class="nav-item" role="presentation">
+    <button class="nav-link active" id="FRONTEND-tab" data-bs-toggle="tab" data-bs-target="#FRONTEND" type="button" role="tab" aria-controls="FRONTEND" aria-selected="true">FRONTEND</button></li>
+	<li class="nav-item" role="presentation">
+    <button class="nav-link" id="BACKEND-tab" data-bs-toggle="tab" data-bs-target="#BACKEND" type="button" role="tab" aria-controls="BACKEND" aria-selected="false"><i class=""></i>BACKEND</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="HERRAMIENTAS-tab" data-bs-toggle="tab" data-bs-target="#HERRAMIENTAS" type="button" role="tab" aria-controls="HERRAMIENTAS" aria-selected="false"><i class=""></i>HERRAMIENTAS</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="APRENDIENDO-tab" data-bs-toggle="tab" data-bs-target="#APRENDIENDO" type="button" role="tab" aria-controls="APRENDIENDO" aria-selected="false"><i class=""></i>APRENDIENDO</button>
+  </li>
+            </ul>
+          </div><br/>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="FRONTEND" role="tabpanel" aria-labelledby="FRONTEND-tab">
+	<!-- <h4>FRONTEND</h4> -->
+		<div class="container">
+		<div class="row">
+		<div class="col"><a href="https://developer.mozilla.org/es/docs/Glossary/HTML5"><i class="devicon-html5-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><a href="https://developer.mozilla.org/es/docs/Web/CSS"><i class="devicon-css3-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><a href="https://developer.mozilla.org/es/docs/Web/JavaScript"><i class="devicon-javascript-plain colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		</div>
+		</div>
+		</div>
+  <div class="tab-pane fade" id="BACKEND" role="tabpanel" aria-labelledby="BACKEND-tab">
+	<!-- <h4>BACKEND</h4> -->
+		<div class="container">
+		<div class="row">
+		<div class="col"><a href="https://www.php.net/manual/es/intro-whatis.php"><i class="devicon-php-plain colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><a href="https://www.mongodb.com/"><i class="devicon-mongodb-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><a href="https://www.mysql.com/"><i class="devicon-mysql-plain-wordmark" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><i class="devicon-redis-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>
+         </div> 
+		</div>
+		</div>
+	
+  <div class="tab-pane fade" id="HERRAMIENTAS" role="tabpanel" aria-labelledby="HERRAMIENTAS-tab">
+	<!-- <h4>HERRAMIENTAS</h4> -->
+		<div class="container">
+		<div class="row">
+			<div class="col"><a href="https://www.docker.com/"><i class="devicon-docker-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+			<div class="col"><a href="https://git-scm.com/"><i class="devicon-git-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+			<div class="col"><a href=""><i class="devicon-npm-original-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+			</div><br/>
+		<div class="row">
+			<div class="col"><a href="https://www.atlassian.com/es/software/jira"><i class="devicon-jira-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+			<div class="col"><a href="https://code.visualstudio.com/"><i class="devicon-vscode-plain colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+			<div class="col"><i class="fa-brands fa-linux" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>
+		</div><br/>
+		<div class="row">
+			<div class="col"><i class="fab fa-joomla" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>			
+			<div class="col"><i class="devicon-wordpress-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>
+			<div class="col"><i class="devicon-moodle-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>
+		</div>
+		</div>
+		</div>
+	 <div class="tab-pane fade" id="APRENDIENDO" role="tabpanel" aria-labelledby="APRENDIENDO-tab">
+	<!-- <h4>APRENDIENDO</h4> -->
+		<div class="container">
+		<div class="row">
+		<div class="col"><a href="https://www.php.net/manual/es/intro-whatis.php"><i class="devicon-nodejs-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></a></div>
+		<div class="col"><i class="devicon-kubernetes-plain-wordmark colored" style="Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;"></i></div>
+        <div class="col"></div>
+		</div> 
+		</div>
+		</div>	
+		
+</div>		  
+   </div>
 
           </div>
 
@@ -685,8 +689,8 @@
 <script src="service-worker.js" defer></script>
 
 <!--Canvas-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA==" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js" integrity="sha512-FJ2OYvUIXUqCcPf1stu+oTBlhn54W0UisZB/TNrZaVMHHhYvLBV9jMbvJYtvDe5x/WVaoXZ6KB+Uqe5hT2vlyA==" crossorigin="anonymous"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA==" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/101/three.min.js"></script>
     <script>/*
         * RetroArch Menu Shader Pipeline Ribbon
