@@ -296,13 +296,24 @@ h6 {
   z-index: 2;
   border-radius: 50px;
   //border: 2px solid white;
-  -webkit-animation: pulse 2s infinite;
-  animation: pulse 2s infinite;
+  /* -webkit-animation: pulse 2s infinite; */
+  /* animation: pulse 2s infinite; */
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
   margin-top: 3rem;
-  position: relative;
+  /* position: relative; */
   bottom: -20px;
+  transition: 0.4s;
 }
-
+ 
+.fa, .fab, .fad, .fal, .far, .fas {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1;
+}
 #hero .btn-get-started:hover {
   color: #007bff;
 }
@@ -310,12 +321,13 @@ h6 {
 @media (min-width: 1px){
 #hero .btn-get-started .fa-arrow-down {
   padding-top: 200px;
-  -webkit-animation: pulse 2s infinite;
-  animation: pulse 2s infinite;
+  /* padding-top: 10px; */
+  /* -webkit-animation: pulse 2s infinite; */
+  /* animation: pulse 2s infinite; */
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
   padding-left: 150px;
 }
 }
-
 @media (min-width: 1024px) {
   #hero {
     background-attachment: fixed;
