@@ -128,7 +128,41 @@ setup();
 /*<!---------------------------------------------------------------
 # Fichero segun idioma navegador
 -------------------------------------------------------------->*/
+/*
+// Detecta el idioma del navegador
+var idiomaNavegador = navigator.language || navigator.userLanguage;
 
+// Define las URLs para cada idioma
+var urlsPorIdioma = {
+  'es': 'https://rripollesg.github.io/portfolio/',
+  'en': 'https://rripollesg.github.io/portfolio/EN',
+  'it': 'https://rripollesg.github.io/portfolio/'
+};
+
+// Función para redirigir según el idioma
+function redirigirSegunIdioma(idioma) {
+  // Comprueba si ya se ha redirigido previamente
+  if (localStorage.getItem('idiomaRedirigido') !== idioma) {
+    // Guarda el idioma en localStorage y redirige
+    localStorage.setItem('idiomaRedirigido', idioma);
+    window.location.href = urlsPorIdioma[idioma] || urlsPorIdioma['es']; // Redirige a español por defecto si el idioma no está definido
+  }
+}
+
+// Ejecuta la redirección solo si no se ha hecho previamente
+if (!localStorage.getItem('idiomaRedirigido')) {
+  if (idiomaNavegador.startsWith('es')) {
+    redirigirSegunIdioma('es');
+  } else if (idiomaNavegador.startsWith('en')) {
+    redirigirSegunIdioma('en');
+  } else if (idiomaNavegador.startsWith('it')) {
+    redirigirSegunIdioma('it');
+  } else {
+    // Si el idioma no es ninguno de los anteriores, puedes elegir una acción por defecto
+    redirigirSegunIdioma('es'); // Por ejemplo, redirigir a la versión en español
+  }
+}
+*/
 /*<!---------------------------------------------------------------
 # Slider
 -------------------------------------------------------------->
