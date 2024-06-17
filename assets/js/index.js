@@ -128,14 +128,14 @@ setup();
 /*<!---------------------------------------------------------------
 # Fichero segun idioma navegador
 -------------------------------------------------------------->*/
-/*
+
 // Detecta el idioma del navegador
 var idiomaNavegador = navigator.language || navigator.userLanguage;
 
 // Define las URLs para cada idioma
 var urlsPorIdioma = {
   'es': 'https://rripollesg.github.io/portfolio/',
-  'en': 'https://rripollesg.github.io/portfolio/EN',
+  'en': 'https://rripollesg.github.io/portfolio/index-EN',
   'it': 'https://rripollesg.github.io/portfolio/'
 };
 
@@ -162,7 +162,7 @@ if (!localStorage.getItem('idiomaRedirigido')) {
     redirigirSegunIdioma('es'); // Por ejemplo, redirigir a la versión en español
   }
 }
-*/
+
 /*<!---------------------------------------------------------------
 # Slider
 -------------------------------------------------------------->
