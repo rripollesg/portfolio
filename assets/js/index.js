@@ -14,7 +14,7 @@ console.log("* Portfolio - v3.9.0\n* Template URL: https://rripollesg.github.io/
 /*<!---------------------------------------------------------------
 # Canvas
 -------------------------------------------------------------->*/
-let resizeReset = function() {
+/*let resizeReset = function() {
 	w = canvasBody.width = window.innerWidth;
 	h = canvasBody.height = window.innerHeight;
 }
@@ -124,18 +124,18 @@ drawArea = canvasBody.getContext("2d");
 let delay = 200, tid,
 rgb = opts.lineColor.match(/\d+/g);
 resizeReset();
-setup();
+setup();*/
 /*<!---------------------------------------------------------------
 # Fichero segun idioma navegador
 -------------------------------------------------------------->*/
-/*
+
 // Detecta el idioma del navegador
 var idiomaNavegador = navigator.language || navigator.userLanguage;
 
 // Define las URLs para cada idioma
 var urlsPorIdioma = {
   'es': 'https://rripollesg.github.io/portfolio/',
-  'en': 'https://rripollesg.github.io/portfolio/EN',
+  'en': 'https://rripollesg.netlify.app/index-EN',
   'it': 'https://rripollesg.github.io/portfolio/'
 };
 
@@ -162,7 +162,7 @@ if (!localStorage.getItem('idiomaRedirigido')) {
     redirigirSegunIdioma('es'); // Por ejemplo, redirigir a la versión en español
   }
 }
-*/
+
 /*<!---------------------------------------------------------------
 # Slider
 -------------------------------------------------------------->
