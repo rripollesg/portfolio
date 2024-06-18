@@ -135,7 +135,7 @@ var idiomaNavegador = navigator.language || navigator.userLanguage;
 // Define las URLs para cada idioma
 var urlsPorIdioma = {
   'es': 'https://rripollesg.github.io/portfolio/',
-  'en': 'https://rripollesg.github.io/index-EN',
+  'en': 'https://rripollesg.github.io/portfolio/EN',
   'it': 'https://rripollesg.github.io/portfolio/'
 };
 
