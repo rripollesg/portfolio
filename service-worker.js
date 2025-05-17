@@ -16,8 +16,8 @@ self.addEventListener('install', function(event) {
     const filesToCache = [
   // Guardar en caché los archivos estáticos
         '/',
-        '/index.html',
-        '/EN.html',
+        'index.html',
+        'EN.html',
         '/assets/img/profile3-img.jpg',    // Verifica este nombre exacto
         '/assets/img/EN.png',
         '/assets/img/ES.png',
