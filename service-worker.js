@@ -13,10 +13,8 @@
 
 // service-worker.js
 self.addEventListener('install', function(event) {
+    const filesToCache = [
   // Guardar en caché los archivos estáticos
-  event.waitUntil(
-    caches.open('cache01').then(function(cache) {
-      return cache.addAll([
         './',
         'index.html',
         '/assets/img/profile3-img.jpg',
@@ -32,11 +30,22 @@ self.addEventListener('install', function(event) {
         '/assets/vendor/bootstrap/css/bootstrap.min.css',
         '/assets/js/tagcanvas.min.js',
         // Agrega aquí los archivos que deseas almacenar en caché
-      ]);
+      ];
+    event.waitUntil(
+    caches.open('cache01').then(async (cache) => {
+      for (const file of filesToCache) {
+        try {
+          const response = await fetch(file);
+          if (!response.ok) throw new Error(`HTTP ${response.status}`);
+          await cache.put(file, response.clone());
+          console.log(`✅ Cached: ${file}`);
+        } catch (err) {
+          console.error(`❌ Error caching ${file}:`, err);
+        }
+      }
     })
   );
 });
-
 // Responder con los archivos en caché cuando no hay conexión
 self.addEventListener('fetch', function(event) {
   event.respondWith(
