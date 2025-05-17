@@ -30,7 +30,7 @@ self.addEventListener('install', function(event) {
         '/assets/vendor/bootstrap-icons/bootstrap-icons.css',
         '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
         '/assets/vendor/bootstrap/css/bootstrap.min.css',
-        '/assets/js/tagcanvas.min.js'
+        '/assets/js/tagcanvas.min.js',
         // Agrega aquí los archivos que deseas almacenar en caché
       ]);
     })
