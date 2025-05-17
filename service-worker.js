@@ -16,17 +16,17 @@ self.addEventListener('install', function(event) {
       return cache.addAll([
         './',
         'index.html',
-        'style.css',
-        'profile3-img.jpg',
-        'favicon.png',
-        'index-EN.html',
+        '/assets/img/profile3-img.jpg',
+        '/assets/img/favicon.png',
+        'EN.html',
         '/assets/css/style.css',
         '/assets/js/main.js',
         '/assets/js/index.js',
         '/assets/vendor/bootstrap-icons/bootstrap-icons.css',
         '/assets/vendor/bootstrap/js/bootstrap.bundle.min.js',
         '/assets/vendor/bootstrap/css/bootstrap.min.css',
-        'assets/js/tagcanvas.min.js'
+        'assets/js/tagcanvas.min.js',
+        'CV Raul Ripolles Garcia.pdf'
         // Agrega aquí los archivos que deseas almacenar en caché
       ]);
     })
