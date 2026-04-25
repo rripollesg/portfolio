@@ -105,6 +105,8 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile</span></a></li>
           <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-briefcase"></i> <span>Work experience</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-photo-album"></i> <span>Portfolio</span></a></li>
+          <li><a href="#skills" class="nav-link scrollto"><i class="bx bx-brain"></i> <span>Skills</span></a></li>
           <li><a href="CV Raul Ripolles Garcia EN.pdf"><i class="fas fa-download"></i> Download CV</a></li>
           <li><a href="index.html"><img src="assets/img/ES.png" alt="spanish">&nbsp;Spanish</a></li>
         </ul>
@@ -218,14 +220,14 @@
             </div>
             <h3 class="resume-title">Certificates and Courses</h3>
 		      <div class="resume-item"> 
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExampleMobileEn">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h2 class="accordion-header" id="headingOneMobileEn">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneMobileEn" aria-expanded="false" aria-controls="collapseOneMobileEn">
           Microsoft
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div id="collapseOneMobileEn" class="accordion-collapse collapse" aria-labelledby="headingOneMobileEn" data-bs-parent="#accordionExampleMobileEn">
         <div class="accordion-body">
 <div class="mb-3"> 
   <h5>Introduction to hybrid cloud services in Azure</h5>
@@ -543,14 +545,14 @@
             </div>
             <h3 class="resume-title">Certificates and Courses</h3>
 		  <div class="resume-item"> 
-  <div class="accordion" id="accordionExample">
+  <div class="accordion" id="accordionExampleDesktopEn">
     <div class="accordion-item">
-      <h2 class="accordion-header" id="headingOne">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+      <h2 class="accordion-header" id="headingOneDesktopEn">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneDesktopEn" aria-expanded="false" aria-controls="collapseOneDesktopEn">
           Microsoft
         </button>
       </h2>
-      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+      <div id="collapseOneDesktopEn" class="accordion-collapse collapse" aria-labelledby="headingOneDesktopEn" data-bs-parent="#accordionExampleDesktopEn">
         <div class="accordion-body">
 <div class="mb-3"> 
   <h5>Introduction to hybrid cloud services in Azure</h5>
@@ -834,6 +836,169 @@
 
       </div>
     </section><!-- End Resume Section -->
+
+    <!-- ======= Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+        <div class="section-title">
+          <h2>Portfolio</h2>
+          <p>A curated selection of projects with functional summary, stack and visual gallery.</p>
+        </div>
+
+        <ul id="portfolio-flters" class="portfolio-filters" data-aos="fade-up">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-app">Apps</li>
+          <!--<li data-filter=".filter-qa">QA</li>
+          <li data-filter=".filter-ai">AI</li>-->
+        </ul>
+
+        <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-6 portfolio-item filter-web">
+            <article class="portfolio-card" data-title="Saltapalabra" data-subtitle="HTML + CSS" data-gallery="assets/img/Saltapalabra.png|assets/img/Saltapalabra2.png|assets/img/Saltapalabra3.png">
+              <img src="assets/img/Saltapalabra.png" class="img-fluid portfolio-cover" alt="Saltapalabra">
+              <div class="portfolio-card-body">
+                <span class="portfolio-badge">Web</span>
+                <h3>Saltapalabra</h3>
+                <p>A Pasapalabra-style game with camera and microphone support to enjoy with friends.</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>JavaScript</span><span>CSS</span>
+                </div>
+                <div class="swiper portfolio-thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/Saltapalabra.png" alt="Saltapalabra thumbnail 1"></div>
+                    <div class="swiper-slide"><img src="assets/img/Saltapalabra2.png" alt="Saltapalabra thumbnail 2"></div>
+                    <div class="swiper-slide"><img src="assets/img/Saltapalabra3.png" alt="Saltapalabra thumbnail 3"></div>
+                  </div>
+                </div>
+                <div class="portfolio-actions">
+                  <button class="portfolio-open" type="button">Open gallery</button>
+                  <a href="https://saltapalabra.netlify.app/" target="_blank" rel="noopener noreferrer">Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-lg-6 portfolio-item filter-web">
+            <article class="portfolio-card" data-title="Safedocument" data-subtitle="HTML + CSS" data-gallery="assets/img/Safedocument.png|assets/img/Safedocument2.png|assets/img/Safedocument3.png">
+              <img src="assets/img/Safedocument.png" class="img-fluid portfolio-cover" alt="Safedocument">
+              <div class="portfolio-card-body">
+                <span class="portfolio-badge">Web</span>
+                <h3>Anti-AI Document Protection Tool</h3>
+                <p>Application to obfuscate text, watermark sensitive content and protect files from unauthorized usage.</p>
+                <div class="portfolio-tech">
+                  <span>HTML</span><span>JavaScript</span><span>CSS</span>
+                </div>
+                <div class="swiper portfolio-thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/Safedocument.png" alt="Safedocument thumbnail 1"></div>
+                    <div class="swiper-slide"><img src="assets/img/Safedocument2.png" alt="Safedocument thumbnail 2"></div>
+                    <div class="swiper-slide"><img src="assets/img/Safedocument3.png" alt="Safedocument thumbnail 3"></div>
+                  </div>
+                </div>
+                <div class="portfolio-actions">
+                  <button class="portfolio-open" type="button">Open gallery</button>
+                  <a href="https://Safedocument.netlify.app/" target="_blank" rel="noopener noreferrer">Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!--<div class="col-lg-6 portfolio-item filter-qa">
+            <article class="portfolio-card" data-title="QA Metrics Dashboard" data-subtitle="Testing & Reporting" data-gallery="assets/img/IMG_20200708_161050_329-removebg-preview.png|assets/img/5.jpg|assets/img/profile3-img.jpg">
+              <img src="assets/img/IMG_20200708_161050_329-removebg-preview.png" class="img-fluid portfolio-cover" alt="QA dashboard project">
+              <div class="portfolio-card-body">
+                <span class="portfolio-badge">QA</span>
+                <h3>QA Metrics Dashboard</h3>
+                <p>Quality dashboard for issue traceability, test coverage and sprint-based resolution time tracking.</p>
+                <div class="portfolio-tech">
+                  <span>Cypress</span><span>Jira</span><span>SQL</span>
+                </div>
+                <div class="swiper portfolio-thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/IMG_20200708_161050_329-removebg-preview.png" alt="QA thumb 1"></div>
+                    <div class="swiper-slide"><img src="assets/img/5.jpg" alt="QA thumb 2"></div>
+                    <div class="swiper-slide"><img src="assets/img/profile3-img.jpg" alt="QA thumb 3"></div>
+                  </div>
+                </div>
+                <div class="portfolio-actions">
+                  <button class="portfolio-open" type="button">Open gallery</button>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Details</a>
+                </div>
+              </div>
+            </article>
+          </div>-->
+
+          <!--<div class="col-lg-6 portfolio-item filter-web">
+            <article class="portfolio-card" data-title="Corporate Multi-site Portal" data-subtitle="Brand + CMS" data-gallery="assets/img/5.jpg|assets/img/IMG_20200708_161050_329-removebg-preview.png|assets/img/profile3-img.jpg">
+              <img src="assets/img/5.jpg" class="img-fluid portfolio-cover" alt="Corporate portal project">
+              <div class="portfolio-card-body">
+                <span class="portfolio-badge">Web</span>
+                <h3>Corporate Multi-site Portal</h3>
+                <p>Corporate website optimized for SEO, performance and decentralized content management.</p>
+                <div class="portfolio-tech">
+                  <span>Bootstrap</span><span>JavaScript</span><span>CMS</span>
+                </div>
+                <div class="swiper portfolio-thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/5.jpg" alt="Portal thumb 1"></div>
+                    <div class="swiper-slide"><img src="assets/img/IMG_20200708_161050_329-removebg-preview.png" alt="Portal thumb 2"></div>
+                    <div class="swiper-slide"><img src="assets/img/profile3-img.jpg" alt="Portal thumb 3"></div>
+                  </div>
+                </div>
+                <div class="portfolio-actions">
+                  <button class="portfolio-open" type="button">Open gallery</button>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Demo</a>
+                </div>
+              </div>
+            </article>
+          </div>-->
+
+          <!--<div class="col-lg-6 portfolio-item filter-ai">
+            <article class="portfolio-card" data-title="AI Assistant for Internal Processes" data-subtitle="Automation + AI" data-gallery="assets/img/profile3-img.jpg|assets/img/IMG_20200708_161050_329-removebg-preview.png|assets/img/5.jpg">
+              <img src="assets/img/profile3-img.jpg" class="img-fluid portfolio-cover" alt="AI assistant project">
+              <div class="portfolio-card-body">
+                <span class="portfolio-badge">AI</span>
+                <h3>AI Assistant for Internal Processes</h3>
+                <p>Assistant to generate responses, technical documentation and automate repetitive team tasks.</p>
+                <div class="portfolio-tech">
+                  <span>Python</span><span>OpenAI API</span><span>Automation</span>
+                </div>
+                <div class="swiper portfolio-thumb-swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="assets/img/profile3-img.jpg" alt="AI thumb 1"></div>
+                    <div class="swiper-slide"><img src="assets/img/IMG_20200708_161050_329-removebg-preview.png" alt="AI thumb 2"></div>
+                    <div class="swiper-slide"><img src="assets/img/5.jpg" alt="AI thumb 3"></div>
+                  </div>
+                </div>
+                <div class="portfolio-actions">
+                  <button class="portfolio-open" type="button">Open gallery</button>
+                  <a href="#" target="_blank" rel="noopener noreferrer">Details</a>
+                </div>
+              </div>
+            </article>
+          </div>-->
+        </div>
+      </div>
+    </section><!-- End Portfolio Section -->
+
+    <div id="portfolioModal" class="portfolio-modal" aria-hidden="true">
+      <div class="portfolio-modal-inner">
+        <button type="button" class="portfolio-modal-close" aria-label="Close gallery">
+          <i class="bi bi-x-lg"></i>
+        </button>
+        <h3 class="portfolio-modal-title"></h3>
+        <p class="portfolio-modal-subtitle"></p>
+
+        <div class="swiper portfolio-modal-main-swiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+
+        <div class="swiper portfolio-modal-thumbs-swiper">
+          <div class="swiper-wrapper"></div>
+        </div>
+      </div>
+    </div>
 
     <!-- ======= Skills Section ======= -->
     <section id="skills" class="skills section-bg">
