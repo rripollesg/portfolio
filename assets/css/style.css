@@ -1,8 +1,7 @@
 /**
 * Template Name: iPortfolio - v3.9.0
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Template URL: https://serefor.com/
+* Author: Raúl Ripollés
 */
 
 /*--------------------------------------------------------------
@@ -295,7 +294,7 @@ h6 {
   display: block;
   z-index: 2;
   border-radius: 50px;
-  //border: 2px solid white;
+  /*border: 2px solid white;
   /* -webkit-animation: pulse 2s infinite; */
   /* animation: pulse 2s infinite; */
   animation: up-down 1s ease-in-out infinite alternate-reverse both;
@@ -623,56 +622,231 @@ section {
 /*--------------------------------------------------------------
 # Portfolio
 --------------------------------------------------------------*/
-/* .work-box { */
-  /* margin-bottom: 3rem; */
-  /* -webkit-backface-visibility: hidden; */
-  /* backface-visibility: hidden; */
-  /* background-color: #fff; */
-/* } */
+.portfolio .portfolio-filters {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding: 0;
+}
 
-/* .work-box:hover img { */
-  /* transform: scale(1.3); */
-/* } */
+.portfolio .portfolio-filters li {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 20px;
+  border: 1px solid #d8e2f0;
+  background: #fff;
+  transition: all 0.3s ease;
+}
 
-/* .work-img { */
-  /* display: block; */
-  /* overflow: hidden; */
-/* } */
+.portfolio .portfolio-filters li.filter-active,
+.portfolio .portfolio-filters li:hover {
+  background: #149ddd;
+  border-color: #149ddd;
+  color: #fff;
+}
 
-/* .work-img img { */
-  /* transition: all 1s; */
-/* } */
+.portfolio-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 25px rgba(30, 60, 90, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
 
-/* .work-content { */
-  /* padding: 2rem 3% 1rem 4%; */
-/* } */
+.portfolio-cover {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
 
-/* .work-content .w-more { */
-  /* color: #4e4e4e; */
-  /* font-size: 0.8rem; */
-/* } */
+.portfolio-card-body {
+  padding: 20px;
+}
 
-/* .work-content .w-more .w-ctegory { */
-  /* color: #0078ff; */
-/* } */
+.portfolio-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #149ddd;
+  background: #e8f4fc;
+  padding: 6px 10px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+}
 
-/* .work-content .w-like { */
-  /* font-size: 2.5rem; */
-  /* color: #0078ff; */
-  /* float: right; */
-/* } */
+.portfolio-card h3 {
+  font-size: 20px;
+  color: #173b6c;
+  margin-bottom: 8px;
+}
 
-/* .work-content .w-like a { */
-  /* color: #0078ff; */
-/* } */
+.portfolio-card p {
+  font-size: 14px;
+  margin-bottom: 14px;
+}
 
-/* .work-content .w-like .num-like { */
-  /* font-size: 0.7rem; */
-/* } */
+.portfolio-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
 
-/* .w-title { */
-  /* font-size: 1.2rem; */
-/* } */
+.portfolio-tech span {
+  font-size: 12px;
+  border: 1px solid #d7e3f5;
+  padding: 4px 10px;
+  border-radius: 14px;
+  color: #173b6c;
+}
+
+.portfolio-thumb-swiper .swiper-slide {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #eef3fa;
+}
+
+.portfolio-thumb-swiper img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+}
+
+.portfolio-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.portfolio-actions button,
+.portfolio-actions a {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.portfolio-actions button {
+  background: #149ddd;
+  color: #fff;
+}
+
+.portfolio-actions button:hover {
+  background: #0e86bd;
+}
+
+.portfolio-actions a {
+  background: #e9f4fc;
+  color: #173b6c;
+}
+
+.portfolio-actions a:hover {
+  background: #d1ebfa;
+}
+
+.portfolio-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(2, 11, 25, 0.8);
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.25s ease;
+  padding: 30px 16px;
+}
+
+.portfolio-modal.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-modal-inner {
+  width: min(980px, 100%);
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  padding: 22px;
+  position: relative;
+}
+
+.portfolio-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  border: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f2f6fc;
+}
+
+.portfolio-modal-title {
+  color: #173b6c;
+  margin-bottom: 0;
+}
+
+.portfolio-modal-subtitle {
+  font-size: 13px;
+  color: #6f7180;
+  margin-bottom: 16px;
+}
+
+.portfolio-modal-main-swiper {
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  background: #0c1a2b;
+}
+
+.portfolio-modal-main-swiper img {
+  width: 100%;
+  height: clamp(260px, 70vh, 720px);
+  object-fit: contain;
+  background: #0c1a2b;
+}
+
+.portfolio-modal-thumbs-swiper .swiper-slide {
+  border-radius: 10px;
+  overflow: hidden;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.portfolio-modal-thumbs-swiper .swiper-slide-thumb-active {
+  opacity: 1;
+  outline: 2px solid #149ddd;
+}
+
+.portfolio-modal-thumbs-swiper img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+body.portfolio-modal-open {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .portfolio-cover {
+    height: 200px;
+  }
+
+  .portfolio-modal-main-swiper img {
+    height: clamp(220px, 55vh, 460px);
+  }
+}
 
 
 /*--------------------------------------------------------------
