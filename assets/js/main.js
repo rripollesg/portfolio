@@ -242,6 +242,124 @@
   });
 
   /**
+   * Portfolio thumbnails and modal gallery
+   */
+  const initPortfolioGallery = () => {
+    const thumbSliders = select('.portfolio-thumb-swiper', true);
+    thumbSliders.forEach((sliderEl) => {
+      new Swiper(sliderEl, {
+        slidesPerView: 3,
+        spaceBetween: 8,
+        freeMode: true,
+        watchSlidesProgress: true
+      });
+    });
+
+    const modal = select('#portfolioModal');
+    if (!modal) return;
+
+    const modalTitle = select('.portfolio-modal-title');
+    const modalSubtitle = select('.portfolio-modal-subtitle');
+    const modalMainWrapper = select('.portfolio-modal-main-swiper .swiper-wrapper');
+    const modalThumbsWrapper = select('.portfolio-modal-thumbs-swiper .swiper-wrapper');
+    let modalMainSwiper = null;
+    let modalThumbsSwiper = null;
+
+    const destroyModalSwipers = () => {
+      if (modalMainSwiper) {
+        modalMainSwiper.destroy(true, true);
+        modalMainSwiper = null;
+      }
+      if (modalThumbsSwiper) {
+        modalThumbsSwiper.destroy(true, true);
+        modalThumbsSwiper = null;
+      }
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('is-visible');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('portfolio-modal-open');
+      destroyModalSwipers();
+    };
+
+    const openModal = (cardEl) => {
+      const galleryRaw = cardEl.getAttribute('data-gallery') || '';
+      const images = galleryRaw.split('|').map((img) => img.trim()).filter(Boolean);
+      if (images.length === 0) return;
+
+      modalTitle.textContent = cardEl.getAttribute('data-title') || 'Proyecto';
+      modalSubtitle.textContent = cardEl.getAttribute('data-subtitle') || '';
+
+      modalMainWrapper.innerHTML = '';
+      modalThumbsWrapper.innerHTML = '';
+
+      images.forEach((imgSrc, index) => {
+        modalMainWrapper.insertAdjacentHTML(
+          'beforeend',
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="Vista ${index + 1}"></div>`
+        );
+        modalThumbsWrapper.insertAdjacentHTML(
+          'beforeend',
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="Miniatura ${index + 1}"></div>`
+        );
+      });
+
+      modal.classList.add('is-visible');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('portfolio-modal-open');
+
+      modalThumbsSwiper = new Swiper('.portfolio-modal-thumbs-swiper', {
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          0: {
+            slidesPerView: 3
+          },
+          768: {
+            slidesPerView: 4
+          }
+        }
+      });
+
+      modalMainSwiper = new Swiper('.portfolio-modal-main-swiper', {
+        spaceBetween: 10,
+        loop: true,
+        keyboard: {
+          enabled: true
+        },
+        thumbs: {
+          swiper: modalThumbsSwiper
+        }
+      });
+    };
+
+    on('click', '.portfolio-open', function(e) {
+      e.preventDefault();
+      const cardEl = this.closest('.portfolio-card');
+      if (cardEl) openModal(cardEl);
+    }, true);
+
+    on('click', '.portfolio-modal-close', function() {
+      closeModal();
+    });
+
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-visible')) {
+        closeModal();
+      }
+    });
+  };
+
+  initPortfolioGallery();
+
+  /**
    * Animation on scroll
    */
   window.addEventListener('load', () => {
