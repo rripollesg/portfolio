@@ -105,7 +105,6 @@ export const es: Dictionary = {
       { title: 'Curso de desarrollo de aplicaciones moviles', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_desarrollo_apps.pdf' },
       { title: 'Ciberseguridad en el Teletrabajo', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_ciberseguridad.pdf' },
       { title: 'Scrum Foundations Professional Certificate (SFPC)', period: '2019', place: 'Valencia-España Certiprof', file: 'assets/certificados/Certificado_SCRUM_Raul_Ripolles.pdf' },
-      { title: 'SAP conceptos e iniciacion', period: '2019', place: 'Logali', file: 'assets/certificados/SAP_Conceptos_e_iniciación-Obtener_Certificado_de_aprovechamiento_2383.pdf' },
       { title: 'Diploma de administración y seguridad informática: LE & LPIC1', period: '2018', place: 'Valencia-España San Roman', file: 'assets/certificados/titulo_LPIC.pdf' },
       { title: 'Certificado Cisco CCNA2 routing and switching.', period: '2017', place: 'Valencia-España CIPFPM Misericordia', file: 'assets/certificados/Titulos_CCNA2.pdf' },
       { title: 'Título de nivel básico de prevención de riesgos laborales.', period: '2015', place: 'Valencia-España' },

@@ -76,7 +76,6 @@ export const en: Dictionary = {
       { title: 'Mobile app development course', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_desarrollo_apps.pdf' },
       { title: 'Cybersecurity in Remote Work', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_ciberseguridad.pdf' },
       { title: 'Scrum Foundations Professional Certificate (SFPC)', period: '2019', place: 'Valencia-Spain Certiprof', file: 'assets/certificados/Certificado_SCRUM_Raul_Ripolles.pdf' },
-      { title: 'SAP concepts and introduction', period: '2019', place: 'Logali', file: 'assets/certificados/SAP_Conceptos_e_iniciación-Obtener_Certificado_de_aprovechamiento_2383.pdf' },
       { title: 'Diploma in IT administration and security: LE & LPIC1', period: '2018', place: 'Valencia-Spain San Roman', file: 'assets/certificados/titulo_LPIC.pdf' },
       { title: 'Cisco CCNA2 routing and switching certificate.', period: '2017', place: 'Valencia-Spain CIPFPM Misericordia', file: 'assets/certificados/Titulos_CCNA2.pdf' },
       { title: 'Basic occupational risk prevention certificate.', period: '2015', place: 'Valencia-Spain' },
