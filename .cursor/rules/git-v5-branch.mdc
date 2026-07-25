@@ -1,0 +1,11 @@
+---
+description: Git workflow — cambios vía rama v5.0, no main directo
+alwaysApply: true
+---
+
+# Git: rama v5.0
+
+- Trabajar siempre en la rama `v5.0` (checkout si hace falta).
+- Commits y push van a `origin/v5.0`, **nunca** push directo a `main`.
+- Tras subir, indicar al usuario que puede mergear `v5.0` → `main` (PR o merge) cuando quiera publicar en Pages.
+- Si `v5.0` está desfasada respecto a `main`, sincronizar con merge/rebase desde `main` antes de seguir.
