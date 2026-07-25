@@ -1,0 +1,20 @@
+---
+import type { Dictionary } from '../i18n';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+---
+
+<section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <div class="hero-container" data-aos="fade-in">
+    <h1>{t.profile.shortName}</h1>
+    <p><span class="typed" data-typed-items={t.hero.typedItems}></span></p>
+    <canvas id="canvas"></canvas>
+    <a href="#about" class="btn-get-started" aria-label="About">
+      <i class="fas fa-arrow-down"></i>
+    </a>
+  </div>
+</section>

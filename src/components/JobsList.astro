@@ -1,0 +1,31 @@
+---
+import type { Dictionary } from '../i18n';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const jobs = t.resume.jobs;
+---
+
+<h3 class="resume-title">{t.resume.experienceTitle}</h3>
+{
+  jobs.map((job) => (
+    <div class="resume-item">
+      <h4>{job.title}</h4>
+      <h5>{job.period}</h5>
+      <p>
+        <em>{job.place}</em>
+      </p>
+      <ul>
+        {job.bullets.map((b) => (
+          <li>{b}</li>
+        ))}
+        {job.skills.map((s) => (
+          <li class="aptitudes">{s}</li>
+        ))}
+      </ul>
+    </div>
+  ))
+}

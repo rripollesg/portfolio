@@ -1,0 +1,50 @@
+---
+import type { Dictionary } from '../i18n';
+import EducationBlock from './EducationBlock.astro';
+import JobsList from './JobsList.astro';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const r = t.resume;
+---
+
+<section id="resume" class="resume">
+  <div class="container">
+    <div class="section-title">
+      <h2>{r.title}</h2>
+      <p>{r.intro}</p>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 d-block d-md-block d-lg-none">
+        <ul class="nav nav-pills mb-3">
+          <li>
+            <a class="nav-link active" data-bs-toggle="pill" href="#tab1">{r.educationTab}</a>
+          </li>
+          <li>
+            <a class="nav-link" data-bs-toggle="pill" href="#tab2">{r.experienceTab}</a>
+          </li>
+        </ul>
+
+        <div class="tab-content">
+          <div class="tab-pane fade show active" id="tab1">
+            <EducationBlock t={t} accordionId="accordionMobile" />
+          </div>
+          <div class="tab-pane fade" id="tab2">
+            <JobsList t={t} />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-none d-md-none d-lg-block" data-aos="fade-up">
+        <EducationBlock t={t} accordionId="accordionDesktop" />
+      </div>
+      <div class="col-lg-6 d-none d-md-none d-lg-block" data-aos="fade-up" data-aos-delay="100">
+        <JobsList t={t} />
+      </div>
+    </div>
+  </div>
+</section>

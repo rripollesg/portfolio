@@ -1,0 +1,83 @@
+---
+import type { Dictionary } from '../i18n';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const s = t.skills;
+const iconStyle = 'Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;';
+---
+
+<section id="skills" class="skills section-bg">
+  <div class="container">
+    <div class="section-title">
+      <h2>{s.title}</h2>
+    </div>
+    <div class="row skills-content">
+      <div class="col-lg-6" data-aos="fade-up">
+        <div class="panel-box">
+          <div class="tab-menu">
+            <ul class="nav nav-tabs" id="mytab" role="tablist">
+              {
+                s.tabs.map((tab, i) => (
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class:list={['nav-link', i === 0 && 'active']}
+                      id={`${tab.id}-tab`}
+                      data-bs-toggle="tab"
+                      data-bs-target={`#${tab.id}`}
+                      type="button"
+                      role="tab"
+                      aria-controls={tab.id}
+                      aria-selected={i === 0 ? 'true' : 'false'}
+                    >
+                      {tab.label}
+                    </button>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+          <br />
+          <div class="tab-content" id="myTabContent">
+            {
+              s.tabs.map((tab, i) => (
+                <div
+                  class:list={['tab-pane', 'fade', i === 0 && 'show', i === 0 && 'active']}
+                  id={tab.id}
+                  role="tabpanel"
+                  aria-labelledby={`${tab.id}-tab`}
+                >
+                  <div class="container">
+                    <div class="row">
+                      {(s.groups[tab.id] ?? []).map((icon) => (
+                        <div class="col">
+                          {icon.href ? (
+                            <a href={icon.href}>
+                              <i class={icon.iconClass} style={iconStyle}></i>
+                            </a>
+                          ) : (
+                            <i class={icon.iconClass} style={iconStyle}></i>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="panel-box">
+          <h3>{s.languagesTitle}</h3>
+          {s.languages.map((lang) => <p>{lang}</p>)}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

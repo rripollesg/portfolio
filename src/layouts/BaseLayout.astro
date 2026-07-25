@@ -1,0 +1,97 @@
+---
+import type { Dictionary, Locale } from '../i18n';
+import { withBase } from '../utils/paths';
+
+interface Props {
+  t: Dictionary;
+  locale: Locale;
+}
+
+const { t, locale } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, '') ?? 'https://rripollesg.github.io';
+let base = import.meta.env.BASE_URL || '/';
+if (!base.endsWith('/')) base += '/';
+const pageUrl = locale === 'es' ? `${site}${base}` : `${site}${base}en/`;
+const esUrl = `${site}${base}`;
+const enUrl = `${site}${base}en/`;
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>{t.meta.title}</title>
+    <meta content={t.meta.keywords} name="keywords" />
+    <meta name="description" content={t.meta.description} />
+    <meta name="lang" content={t.meta.lang} />
+    <meta name="Author" content="Raul Ripollés" />
+    <link rel="alternate" hreflang="es" href={esUrl} />
+    <link rel="alternate" hreflang="en" href={enUrl} />
+    <link rel="alternate" hreflang="x-default" href={esUrl} />
+    <meta property="og:url" content={pageUrl} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={t.meta.title} />
+    <meta property="og:title" content={t.meta.title} />
+    <meta property="og:description" content={t.meta.description} />
+
+    <link href={withBase('assets/img/favicon.png')} rel="icon" />
+    <link href={withBase('assets/img/favicon.png')} rel="shortcut icon" />
+    <link href={withBase('assets/img/apple-touch-icon.png')} rel="apple-touch-icon" />
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link href={withBase('assets/vendor/aos/aos.css')} rel="stylesheet" />
+    <link href={withBase('assets/vendor/bootstrap/css/bootstrap.min.css')} rel="stylesheet" />
+    <link href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')} rel="stylesheet" />
+    <link href={withBase('assets/vendor/boxicons/css/boxicons.min.css')} rel="stylesheet" />
+    <link href={withBase('assets/vendor/glightbox/css/glightbox.min.css')} rel="stylesheet" />
+    <link href={withBase('assets/vendor/swiper/swiper-bundle.min.css')} rel="stylesheet" />
+    <link href={withBase('assets/css/style.css')} rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/4.0.6/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
+    />
+    <style is:global>
+      #canvas {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+
+    <script is:inline src={withBase('assets/vendor/aos/aos.js')}></script>
+    <script is:inline src={withBase('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}></script>
+    <script is:inline src={withBase('assets/vendor/glightbox/js/glightbox.min.js')}></script>
+    <script is:inline src={withBase('assets/vendor/isotope-layout/isotope.pkgd.min.js')}></script>
+    <script is:inline src={withBase('assets/vendor/swiper/swiper-bundle.min.js')}></script>
+    <script is:inline src={withBase('assets/vendor/typed.js/typed.min.js')}></script>
+    <script is:inline src={withBase('assets/vendor/waypoints/noframework.waypoints.js')}></script>
+    <script is:inline src={withBase('assets/js/main.js')} defer></script>
+    <script
+      is:inline
+      src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/4.0.6/sweetalert2.min.js"
+    ></script>
+    <script is:inline src={withBase('assets/js/index.js')} defer></script>
+    <script is:inline src={withBase('assets/js/particles.js')} defer></script>
+  </body>
+</html>
