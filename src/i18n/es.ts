@@ -195,6 +195,7 @@ export const es: Dictionary = {
           'assets/img/pills/pills-evolucion.png',
           'assets/img/pills/pills-preguntas.png',
           'assets/img/pills/pills-perfil.png',
+          'assets/img/pills/pills-equipo-config.png',
         ],
       },
       {
