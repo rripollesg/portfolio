@@ -1,9 +1,9 @@
 {
   "name": "Portfolio App",
-  "short_name":"Portfolio",
-  "start_url": "/",
+  "short_name": "Portfolio",
+  "start_url": "/portfolio/",
   "display": "standalone",
-  "description": "Portolio Raul Ripolles",
+  "description": "Portfolio Raul Ripolles",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
   "icons": [

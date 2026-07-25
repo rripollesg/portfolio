@@ -1,0 +1,33 @@
+---
+import type { Dictionary } from '../i18n';
+import CertificatesList from './CertificatesList.astro';
+
+interface Props {
+  t: Dictionary;
+  accordionId: string;
+}
+
+const { t, accordionId } = Astro.props;
+const r = t.resume;
+---
+
+<h3 class="resume-title">{r.educationTitle}</h3>
+{
+  r.education.map((item) => (
+    <div class="resume-item">
+      <h4>{item.title}</h4>
+      <h5>{item.period}</h5>
+      <p>
+        <em>{item.place}</em>
+      </p>
+    </div>
+  ))
+}
+<h3 class="resume-title">{r.certificatesTitle}</h3>
+<CertificatesList
+  items={r.certificates}
+  viewLabel={r.viewCertificate}
+  microsoftLabel={r.microsoftGroup}
+  microsoft={r.microsoft}
+  accordionId={accordionId}
+/>
