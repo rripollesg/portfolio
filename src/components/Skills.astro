@@ -1,5 +1,5 @@
 ---
-import type { Dictionary } from '../i18n';
+import type { Dictionary, SkillIcon } from '../i18n';
 
 interface Props {
   t: Dictionary;
@@ -7,7 +7,14 @@ interface Props {
 
 const { t } = Astro.props;
 const s = t.skills;
-const iconStyle = 'Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2px #ccc;';
+
+function chunkIcons(icons: SkillIcon[], size = 3): SkillIcon[][] {
+  const rows: SkillIcon[][] = [];
+  for (let i = 0; i < icons.length; i += size) {
+    rows.push(icons.slice(i, i + size));
+  }
+  return rows;
+}
 ---
 
 <section id="skills" class="skills section-bg">
@@ -40,8 +47,7 @@ const iconStyle = 'Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2p
               }
             </ul>
           </div>
-          <br />
-          <div class="tab-content" id="myTabContent">
+          <div class="tab-content skills-tab-content" id="myTabContent">
             {
               s.tabs.map((tab, i) => (
                 <div
@@ -50,21 +56,21 @@ const iconStyle = 'Font-size:3rem; border-radius: 3px;box-shadow: 2px 2px 0px 2p
                   role="tabpanel"
                   aria-labelledby={`${tab.id}-tab`}
                 >
-                  <div class="container">
-                    <div class="row">
-                      {(s.groups[tab.id] ?? []).map((icon) => (
-                        <div class="col">
+                  {chunkIcons(s.groups[tab.id] ?? []).map((row) => (
+                    <div class="row skills-icons-row">
+                      {row.map((icon) => (
+                        <div class="col-4 text-center">
                           {icon.href ? (
-                            <a href={icon.href}>
-                              <i class={icon.iconClass} style={iconStyle}></i>
+                            <a href={icon.href} aria-label={icon.iconClass}>
+                              <i class={`skill-icon ${icon.iconClass}`}></i>
                             </a>
                           ) : (
-                            <i class={icon.iconClass} style={iconStyle}></i>
+                            <i class={`skill-icon ${icon.iconClass}`}></i>
                           )}
                         </div>
                       ))}
                     </div>
-                  </div>
+                  ))}
                 </div>
               ))
             }

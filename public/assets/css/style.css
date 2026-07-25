@@ -589,6 +589,25 @@ section {
   margin-bottom: 10px;
 }
 
+.resume .resume-item .aptitudes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+  padding-bottom: 4px;
+}
+
+.resume .resume-item .aptitudes-list .aptitudes {
+  font-size: 12px;
+  background: #e4edf9;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.4;
+  border-radius: 2px;
+}
+
 /*-----------Pills-------------------*/
 .resume .nav-pills {
   border-bottom: 1px solid rgba(72, 86, 100), 0.2);
@@ -974,6 +993,35 @@ body.portfolio-modal-open {
     -moz-box-shadow: 0 0 5px rgba(0,0,0,0.06);
     -ms-box-shadow: 0 0 5px rgba(0,0,0,0.06);
     box-shadow: 0 0 5px rgba(0,0,0,0.06);
+}
+
+.skills-tab-content {
+  margin-top: 1rem;
+}
+
+.skills-icons-row {
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 1rem;
+}
+
+.skills-icons-row:last-child {
+  margin-bottom: 0;
+}
+
+.skills-icons-row > [class*="col-"] {
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 0.75rem;
+}
+
+.skills .skill-icon {
+  font-size: 3rem;
+  border-radius: 3px;
+  box-shadow: 2px 2px 0 2px #ccc;
+  display: inline-block;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 
