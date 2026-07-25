@@ -149,6 +149,26 @@ export const en: Dictionary = {
     closeGallery: 'Close gallery',
     projects: [
       {
+        filter: 'filter-app',
+        badge: 'Apps',
+        title: 'Pills',
+        subtitle: 'Health app',
+        description:
+          'Mobile health app to manage medications, medical reports (pain mapping, clinical notes and doctor questions), appointments, vitals, clinical history and profiles, with PDF export and Health Connect integration.',
+        tech: ['Mobile', 'Health', 'Android'],
+        cover: 'assets/img/pills/pills-historial.png',
+        gallery: [
+          'assets/img/pills/pills-historial.png',
+          'assets/img/pills/pills-parte-medica.png',
+          'assets/img/pills/pills-dolor.png',
+          'assets/img/pills/pills-citas.png',
+          'assets/img/pills/pills-constantes.png',
+          'assets/img/pills/pills-evolucion.png',
+          'assets/img/pills/pills-preguntas.png',
+          'assets/img/pills/pills-perfil.png',
+        ],
+      },
+      {
         filter: 'filter-web',
         badge: 'Web',
         title: 'Saltapalabra',
