@@ -65,7 +65,7 @@ export const es: Dictionary = {
     birthLabel: 'Fecha Nacimiento:',
     birthValue: '06/11/1992',
     locationLabel: 'Localización:',
-    locationValue: 'C/ Pintor Cortina, 11, 46017 Valencia.',
+    locationValue: 'Valencia / Madrid.',
     extraLabel: 'Competencias clave:',
     extras: [
       'Comunicación con equipos técnicos y funcionales',

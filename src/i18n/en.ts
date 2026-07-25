@@ -36,7 +36,7 @@ export const en: Dictionary = {
     birthLabel: 'Birth date:',
     birthValue: '06/11/1992',
     locationLabel: 'Location:',
-    locationValue: '46017 Valencia, Spain.',
+    locationValue: 'Valencia / Madrid.',
     extraLabel: 'Key competencies:',
     extras: [
       'Communication with technical and functional teams',
