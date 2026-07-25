@@ -66,14 +66,15 @@ export const es: Dictionary = {
     birthValue: '06/11/1992',
     locationLabel: 'Localización:',
     locationValue: 'C/ Pintor Cortina, 11, 46017 Valencia.',
-    extraLabel: 'Información adicional:',
+    extraLabel: 'Competencias clave:',
     extras: [
-      'Permiso de circulación B',
-      'Beneficiario en el sistema de Garantía Juvenil',
-      'Vehículo Propio',
+      'Comunicación con equipos técnicos y funcionales',
+      'Coordinación técnica',
+      'Gestión de prioridades',
+      'Formación a usuarios',
     ],
     summary:
-      'Profesional responsable y proactivo, con perfil dinámico y orientado al trabajo en equipo. Motivado por el aprendizaje continuo y la mejora constante. Busco incorporarme a una empresa innovadora donde aportar mi experiencia en tecnología y contribuir activamente a la consecución de objetivos.',
+      'Especializado en administración de sistemas, bases de datos e infraestructuras críticas. Experiencia en entornos sanitarios de alta disponibilidad, seguridad y automatización. Acostumbrado a trabajar con equipos multidisciplinares y proyectos de gran escala.',
     showBirth: true,
   },
   resume: {

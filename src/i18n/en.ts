@@ -37,14 +37,15 @@ export const en: Dictionary = {
     birthValue: '06/11/1992',
     locationLabel: 'Location:',
     locationValue: '46017 Valencia, Spain.',
-    extraLabel: 'Additional Information:',
+    extraLabel: 'Key competencies:',
     extras: [
-      'Vehicle license B',
-      'Beneficiary in the Youth Guarantee system',
-      'Own vehicle',
+      'Communication with technical and functional teams',
+      'Technical coordination',
+      'Priority management',
+      'User training',
     ],
     summary:
-      'Responsible and proactive professional with a dynamic, team-oriented profile. Motivated by continuous learning and constant improvement. Seeking to join an innovative company where I can contribute my technology experience and actively support the achievement of business goals.',
+      'Specialized in systems administration, databases, and critical infrastructures. Experience in high-availability healthcare environments, security, and automation. Accustomed to working with multidisciplinary teams and large-scale projects.',
     showBirth: false,
   },
   resume: {
