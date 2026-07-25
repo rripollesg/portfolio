@@ -68,9 +68,6 @@ export const en: Dictionary = {
     certificates: [
       { title: 'Generative AI', period: '2025', place: 'Certjoin', file: 'assets/certificados/Certificado_certijoin_generative_IA.pdf' },
       { title: 'AI for Business Productivity', period: '2025', place: 'EADIC', file: 'assets/certificados/Certificado_IA_productividad_Empresarial.pdf' },
-      { title: 'Project Management', period: '2025', place: 'Europe academy', file: 'assets/certificados/Certificate_PMC1_Project_Management.pdf' },
-      { title: 'ITSRM', period: '2025', place: 'Europe academy', file: 'assets/certificados/Certificate_of_ITSRM.pdf' },
-      { title: 'PMA1 Agile essentials', period: '2025', place: 'Europe academy', file: 'assets/certificados/Certificate_PMA1_Agile_essentials.pdf' },
       { title: 'Cybersecurity essentials', period: '2025', place: 'Linux Foundation', file: 'assets/certificados/cibersecurity_essentials_certificate.pdf' },
       { title: 'Cybersecurity', period: '2025', place: 'Cisco Academy-Instituto Javascript', file: 'assets/certificados/Certificado_Ciberseguridad_cisco.pdf' },
       { title: 'Javascript Essentials', period: '2024', place: 'Cisco Academy-Instituto Javascript', file: 'assets/certificados/JavaScript_Essentials_1_Badge20230720-28-woq3d9.pdf' },
