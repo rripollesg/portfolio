@@ -1,5 +1,5 @@
 ---
-import type { Dictionary, SkillIcon } from '../i18n';
+import type { Dictionary } from '../i18n';
 
 interface Props {
   t: Dictionary;
@@ -7,14 +7,6 @@ interface Props {
 
 const { t } = Astro.props;
 const s = t.skills;
-
-function chunkIcons(icons: SkillIcon[], size = 3): SkillIcon[][] {
-  const rows: SkillIcon[][] = [];
-  for (let i = 0; i < icons.length; i += size) {
-    rows.push(icons.slice(i, i + size));
-  }
-  return rows;
-}
 ---
 
 <section id="skills" class="skills section-bg">
@@ -23,10 +15,10 @@ function chunkIcons(icons: SkillIcon[], size = 3): SkillIcon[][] {
       <h2>{s.title}</h2>
     </div>
     <div class="row skills-content">
-      <div class="col-lg-6" data-aos="fade-up">
+      <div class="col-12 col-lg-6" data-aos="fade-up">
         <div class="panel-box">
           <div class="tab-menu">
-            <ul class="nav nav-tabs" id="mytab" role="tablist">
+            <ul class="nav nav-tabs flex-wrap" id="mytab" role="tablist">
               {
                 s.tabs.map((tab, i) => (
                   <li class="nav-item" role="presentation">
@@ -56,21 +48,19 @@ function chunkIcons(icons: SkillIcon[], size = 3): SkillIcon[][] {
                   role="tabpanel"
                   aria-labelledby={`${tab.id}-tab`}
                 >
-                  {chunkIcons(s.groups[tab.id] ?? []).map((row) => (
-                    <div class="row skills-icons-row">
-                      {row.map((icon) => (
-                        <div class="col-4 text-center">
-                          {icon.href ? (
-                            <a href={icon.href} aria-label={icon.iconClass}>
-                              <i class={`skill-icon ${icon.iconClass}`}></i>
-                            </a>
-                          ) : (
-                            <i class={`skill-icon ${icon.iconClass}`}></i>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  ))}
+                  <div class="skills-icons-grid">
+                    {(s.groups[tab.id] ?? []).map((icon) =>
+                      icon.href ? (
+                        <a href={icon.href} class="skills-icon-link" aria-label={icon.iconClass}>
+                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                        </a>
+                      ) : (
+                        <span class="skills-icon-link">
+                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                        </span>
+                      )
+                    )}
+                  </div>
                 </div>
               ))
             }
@@ -78,7 +68,7 @@ function chunkIcons(icons: SkillIcon[], size = 3): SkillIcon[][] {
         </div>
       </div>
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-delay="100">
         <div class="panel-box">
           <h3>{s.languagesTitle}</h3>
           {s.languages.map((lang) => <p>{lang}</p>)}

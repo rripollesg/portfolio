@@ -24,11 +24,11 @@ const jobs = t.resume.jobs;
         ))}
       </ul>
       {job.skills.length > 0 && (
-        <div class="aptitudes-list">
+        <ul class="aptitudes-list">
           {job.skills.map((skill) => (
-            <span class="aptitudes">{skill}</span>
+            <li class="aptitudes">{skill}</li>
           ))}
-        </div>
+        </ul>
       )}
     </div>
   ))
