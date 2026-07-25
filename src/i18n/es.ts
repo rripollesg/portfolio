@@ -104,7 +104,6 @@ export const es: Dictionary = {
       { title: 'Business Model Canvas Essentials', period: '2023', place: 'Valencia-España Certiprof', file: 'assets/certificados/Certificate_business_model_canvas_essentials.pdf' },
       { title: 'Curso de desarrollo de aplicaciones moviles', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_desarrollo_apps.pdf' },
       { title: 'Ciberseguridad en el Teletrabajo', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_ciberseguridad.pdf' },
-      { title: 'Formación Microsoft Dynamics Navision (Funcional y desarrollo) y PowerBI de la mano de QBS group.', period: '2019', place: 'SOTHIS' },
       { title: 'Scrum Foundations Professional Certificate (SFPC)', period: '2019', place: 'Valencia-España Certiprof', file: 'assets/certificados/Certificado_SCRUM_Raul_Ripolles.pdf' },
       { title: 'SAP conceptos e iniciacion', period: '2019', place: 'Logali', file: 'assets/certificados/SAP_Conceptos_e_iniciación-Obtener_Certificado_de_aprovechamiento_2383.pdf' },
       { title: 'Diploma de administración y seguridad informática: LE & LPIC1', period: '2018', place: 'Valencia-España San Roman', file: 'assets/certificados/titulo_LPIC.pdf' },
