@@ -84,7 +84,7 @@ export const en: Dictionary = {
     jobs: [
       {
         title: 'Tich Consulting (ASISA Group), Database Consultant / Parameterization',
-        period: 'Jan 2024 – Present · 2 years 7 months',
+        period: '2024 – Present',
         place: 'Alicante, Spain',
         bullets: [
           'Parameterization and optimization of SQL Server databases for more than 200 ASISA healthcare centers and international clinics.',
@@ -96,7 +96,7 @@ export const en: Dictionary = {
       },
       {
         title: 'Laberit, Implanter',
-        period: 'Jan 2019 – Jan 2024 · 5 years 1 month',
+        period: '2019 – 2024',
         place: 'Valencia, Spain',
         bullets: [
           'Technical coordination of the SINA program at IVO and HCB Benidorm.',
