@@ -98,7 +98,7 @@ export const es: Dictionary = {
       { title: 'IA Generativa', period: '2025', place: 'Certjoin', file: 'assets/certificados/Certificado_certijoin_generative_IA.pdf' },
       { title: 'IA para la Productividad Empresarial', period: '2025', place: 'EADIC', file: 'assets/certificados/Certificado_IA_productividad_Empresarial.pdf' },
       { title: 'Ciberseguridad essential', period: '2025', place: 'Linux Foundation', file: 'assets/certificados/cibersecurity_essentials_certificate.pdf' },
-      { title: 'Ciberseguridad', period: '2025', place: 'Cisco Academy-Instituto Javascript', file: 'assets/certificados/Certificado_Ciberseguridad_cisco.pdf' },
+      { title: 'Ciberseguridad', period: '2025', place: 'Cisco Academy', file: 'assets/certificados/Certificado_Ciberseguridad_cisco.pdf' },
       { title: 'Javascript Esentials', period: '2024', place: 'Cisco Academy-Instituto Javascript', file: 'assets/certificados/JavaScript_Essentials_1_Badge20230720-28-woq3d9.pdf' },
       { title: 'Certificate Remote Work Professional Certification', period: '2023', place: 'Valencia-España Certiprof', file: 'assets/certificados/Certificate_Remote_Work_Professional_Certification.pdf' },
       { title: 'Business Model Canvas Essentials', period: '2023', place: 'Valencia-España Certiprof', file: 'assets/certificados/Certificate_business_model_canvas_essentials.pdf' },
