@@ -22,10 +22,14 @@ const jobs = t.resume.jobs;
         {job.bullets.map((b) => (
           <li>{b}</li>
         ))}
-        {job.skills.map((s) => (
-          <li class="aptitudes">{s}</li>
-        ))}
       </ul>
+      {job.skills.length > 0 && (
+        <div class="aptitudes-list">
+          {job.skills.map((skill) => (
+            <span class="aptitudes">{skill}</span>
+          ))}
+        </div>
+      )}
     </div>
   ))
 }
