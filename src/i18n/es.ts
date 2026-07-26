@@ -80,7 +80,7 @@ export const es: Dictionary = {
   resume: {
     title: 'Experiencia',
     intro:
-      'Experiencia profesional en el sector sanitario, especializada en la implantación de sistemas HIS (Hospital Information System) en hospitales internacionales. Participación activa en procesos de transformación digital, apoyando a profesionales sanitarios en la adaptación a nuevas metodologías de trabajo. Actualmente en desarrollo continuo de competencias en programación.',
+      'Experiencia profesional en el sector sanitario, especializado en la implantación de sistemas HIS (Hospital Information System) en hospitales internacionales. Participación activa en procesos de transformación digital, apoyando a profesionales sanitarios en la adaptación a nuevas metodologías de trabajo. Actualmente en desarrollo continuo de competencias en programación.',
     educationTab: 'Educación',
     experienceTab: 'Experiencia profesional',
     educationTitle: 'Educación',
