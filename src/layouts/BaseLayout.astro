@@ -14,10 +14,30 @@ if (!base.endsWith('/')) base += '/';
 const pageUrl = locale === 'es' ? `${site}${base}` : `${site}${base}en/`;
 const esUrl = `${site}${base}`;
 const enUrl = `${site}${base}en/`;
-const ogImagePath = t.meta.ogImage ?? 'assets/img/profile3-img.webp';
+const ogImagePath = t.meta.ogImage ?? 'assets/img/og-cover-es.jpg';
 const ogImage = `${site}${base}${ogImagePath.replace(/^\//, '')}`;
 const ogLocale = locale === 'es' ? 'es_ES' : 'en_US';
 const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
+const sameAs = [t.social.linkedin, t.social.github].filter(Boolean);
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: t.profile.name,
+  alternateName: t.profile.shortName,
+  url: pageUrl,
+  image: ogImage,
+  jobTitle: t.profile.role.replace(/\.$/, ''),
+  description: t.meta.description,
+  email: t.social.email.replace(/^mailto:/, ''),
+  telephone: t.social.phone.replace(/^tel:/, ''),
+  sameAs,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Valencia',
+    addressCountry: 'ES',
+  },
+  knowsAbout: ['HIS', 'QA', 'SQL', 'Flutter', 'Healthcare IT'],
+};
 ---
 
 <!doctype html>
@@ -29,6 +49,7 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <meta content={t.meta.keywords} name="keywords" />
     <meta name="description" content={t.meta.description} />
     <meta name="author" content="Raúl Ripollés García" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#149ddd" />
     <link rel="canonical" href={pageUrl} />
     <link rel="alternate" hreflang="es" href={esUrl} />
@@ -36,7 +57,7 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <link rel="alternate" hreflang="x-default" href={esUrl} />
 
     <meta property="og:url" content={pageUrl} />
-    <meta property="og:type" content="website" />
+    <meta property="og:type" content="profile" />
     <meta property="og:site_name" content="Raúl Ripollés García" />
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
@@ -44,14 +65,20 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <meta property="og:locale:alternate" content={ogLocaleAlt} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:image:type" content="image/webp" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={t.meta.ogImageAlt ?? t.profile.imageAlt} />
+    <meta property="profile:first_name" content="Raúl" />
+    <meta property="profile:last_name" content="Ripollés" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={t.meta.title} />
     <meta name="twitter:description" content={t.meta.description} />
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={t.meta.ogImageAlt ?? t.profile.imageAlt} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
 
     <link href={withBase('assets/img/favicon.png')} rel="icon" />
     <link href={withBase('assets/img/favicon.png')} rel="shortcut icon" />
@@ -106,7 +133,7 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <script is:inline src={withBase('assets/vendor/isotope-layout/isotope.pkgd.min.js')}></script>
     <script is:inline src={withBase('assets/vendor/swiper/swiper-bundle.min.js')}></script>
     <script is:inline src={withBase('assets/vendor/typed.js/typed.min.js')}></script>
-    <script is:inline src={`${withBase('assets/js/main.js')}?v=6.0.5`} defer></script>
+    <script is:inline src={`${withBase('assets/js/main.js')}?v=6.0.6`} defer></script>
     <script is:inline src={`${withBase('assets/js/index.js')}?v=6.0.3`} defer></script>
     <script is:inline src={`${withBase('assets/js/particles.js')}?v=6.0.0`} defer></script>
   </body>

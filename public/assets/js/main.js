@@ -247,6 +247,8 @@
       const galleryRaw = cardEl.getAttribute('data-gallery') || '';
       const images = galleryRaw.split('|').map((img) => img.trim()).filter(Boolean);
       if (images.length === 0) return;
+      const altsRaw = cardEl.getAttribute('data-gallery-alts') || '';
+      const alts = altsRaw.split('|').map((item) => item.trim());
 
       const layout = fillMeta(cardEl);
       stopVideo();
@@ -260,13 +262,14 @@
       modalThumbsWrapper.innerHTML = '';
 
       images.forEach((imgSrc, index) => {
+        const altText = (alts[index] || `Vista ${index + 1}`).replace(/"/g, '&quot;');
         modalMainWrapper.insertAdjacentHTML(
           'beforeend',
-          `<div class="swiper-slide"><img src="${imgSrc}" alt="Vista ${index + 1}"></div>`
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}"></div>`
         );
         modalThumbsWrapper.insertAdjacentHTML(
           'beforeend',
-          `<div class="swiper-slide"><img src="${imgSrc}" alt="Miniatura ${index + 1}"></div>`
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}"></div>`
         );
       });
 
