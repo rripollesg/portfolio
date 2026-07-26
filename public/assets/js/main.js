@@ -242,24 +242,17 @@
   });
 
   /**
-   * Portfolio thumbnails and modal gallery
+   * Portfolio modal gallery
    */
   const initPortfolioGallery = () => {
-    const thumbSliders = select('.portfolio-thumb-swiper', true);
-    thumbSliders.forEach((sliderEl) => {
-      new Swiper(sliderEl, {
-        slidesPerView: 3,
-        spaceBetween: 8,
-        freeMode: true,
-        watchSlidesProgress: true
-      });
-    });
-
     const modal = select('#portfolioModal');
     if (!modal) return;
 
+    const modalInner = select('.portfolio-modal-inner');
     const modalTitle = select('.portfolio-modal-title');
     const modalSubtitle = select('.portfolio-modal-subtitle');
+    const modalDescription = select('.portfolio-modal-description');
+    const modalTech = select('.portfolio-modal-tech');
     const modalMainWrapper = select('.portfolio-modal-main-swiper .swiper-wrapper');
     const modalThumbsWrapper = select('.portfolio-modal-thumbs-swiper .swiper-wrapper');
     let modalMainSwiper = null;
@@ -280,6 +273,7 @@
       modal.classList.remove('is-visible');
       modal.setAttribute('aria-hidden', 'true');
       document.body.classList.remove('portfolio-modal-open');
+      if (modalInner) modalInner.classList.remove('is-phone');
       destroyModalSwipers();
     };
 
@@ -288,8 +282,21 @@
       const images = galleryRaw.split('|').map((img) => img.trim()).filter(Boolean);
       if (images.length === 0) return;
 
+      const layout = cardEl.getAttribute('data-layout') || 'web';
+      const techRaw = cardEl.getAttribute('data-tech') || '';
+      const tech = techRaw.split('|').map((item) => item.trim()).filter(Boolean);
+
       modalTitle.textContent = cardEl.getAttribute('data-title') || 'Proyecto';
       modalSubtitle.textContent = cardEl.getAttribute('data-subtitle') || '';
+      if (modalDescription) {
+        modalDescription.textContent = cardEl.getAttribute('data-description') || '';
+      }
+      if (modalTech) {
+        modalTech.innerHTML = tech.map((item) => `<span>${item}</span>`).join('');
+      }
+      if (modalInner) {
+        modalInner.classList.toggle('is-phone', layout === 'phone');
+      }
 
       modalMainWrapper.innerHTML = '';
       modalThumbsWrapper.innerHTML = '';
@@ -311,7 +318,7 @@
 
       modalThumbsSwiper = new Swiper('.portfolio-modal-thumbs-swiper', {
         spaceBetween: 10,
-        slidesPerView: 4,
+        slidesPerView: layout === 'phone' ? 5 : 4,
         freeMode: true,
         watchSlidesProgress: true,
         breakpoints: {
@@ -319,7 +326,7 @@
             slidesPerView: 3
           },
           768: {
-            slidesPerView: 4
+            slidesPerView: layout === 'phone' ? 5 : 4
           }
         }
       });

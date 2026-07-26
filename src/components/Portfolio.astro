@@ -24,51 +24,54 @@ const p = t.portfolio;
 
     <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="100">
       {
-        p.projects.map((project) => (
-          <div class={`col-lg-6 portfolio-item ${project.filter}`}>
-            <article
-              class="portfolio-card"
-              data-title={project.title}
-              data-subtitle={project.subtitle}
-              data-gallery={project.gallery.map((g) => withBase(g)).join('|')}
-            >
-              <img
-                src={withBase(project.cover)}
-                class="img-fluid portfolio-cover"
-                alt={project.title}
-              />
-              <div class="portfolio-card-body">
-                <span class="portfolio-badge">{project.badge}</span>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-                <div class="portfolio-tech">
-                  {project.tech.map((tech) => (
-                    <span>{tech}</span>
-                  ))}
-                </div>
-                <div class="swiper portfolio-thumb-swiper">
-                  <div class="swiper-wrapper">
-                    {project.gallery.map((img, i) => (
-                      <div class="swiper-slide">
-                        <img src={withBase(img)} alt={`${project.title} ${i + 1}`} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                <div class="portfolio-actions">
-                  <button class="portfolio-open" type="button">
-                    {p.openGallery}
-                  </button>
-                  {project.demo && (
-                    <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                      {p.demo}
-                    </a>
+        p.projects.map((project) => {
+          const layout = project.layout ?? (project.filter.includes('filter-app') ? 'phone' : 'web');
+          return (
+            <div class={`col-lg-4 col-md-6 portfolio-item ${project.filter}`}>
+              <article
+                class={`portfolio-card portfolio-card-${layout}`}
+                data-title={project.title}
+                data-subtitle={project.subtitle}
+                data-description={project.description}
+                data-tech={project.tech.join('|')}
+                data-layout={layout}
+                data-gallery={project.gallery.map((g) => withBase(g)).join('|')}
+              >
+                <div class={`portfolio-cover-wrap ${layout === 'phone' ? 'is-phone' : 'is-web'}`}>
+                  {layout === 'phone' ? (
+                    <div class="phone-frame" aria-hidden="true">
+                      <img
+                        src={withBase(project.cover)}
+                        class="portfolio-cover"
+                        alt={project.title}
+                      />
+                    </div>
+                  ) : (
+                    <img
+                      src={withBase(project.cover)}
+                      class="portfolio-cover"
+                      alt={project.title}
+                    />
                   )}
                 </div>
-              </div>
-            </article>
-          </div>
-        ))
+                <div class="portfolio-card-body">
+                  <span class="portfolio-badge">{project.badge}</span>
+                  <h3>{project.title}</h3>
+                  <div class="portfolio-actions">
+                    <button class="portfolio-open" type="button">
+                      {p.openGallery}
+                    </button>
+                    {project.demo && (
+                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                        {p.demo}
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </article>
+            </div>
+          );
+        })
       }
     </div>
   </div>
@@ -81,8 +84,12 @@ const p = t.portfolio;
     </button>
     <h3 class="portfolio-modal-title"></h3>
     <p class="portfolio-modal-subtitle"></p>
-    <div class="swiper portfolio-modal-main-swiper">
-      <div class="swiper-wrapper"></div>
+    <p class="portfolio-modal-description"></p>
+    <div class="portfolio-modal-tech"></div>
+    <div class="portfolio-modal-stage">
+      <div class="swiper portfolio-modal-main-swiper">
+        <div class="swiper-wrapper"></div>
+      </div>
     </div>
     <div class="swiper portfolio-modal-thumbs-swiper">
       <div class="swiper-wrapper"></div>

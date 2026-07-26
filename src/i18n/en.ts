@@ -31,7 +31,6 @@ export const en: Dictionary = {
     typedItems: 'Consultant, Developer, Implanter, QA Tester',
     tagline: 'HIS implementation and development in healthcare.',
     ctaExperience: 'View experience',
-    ctaPills: 'View Pills',
   },
   about: {
     title: 'Profile',
@@ -159,6 +158,7 @@ export const en: Dictionary = {
         description:
           'Mobile health app to manage medications, medical reports (pain mapping, clinical notes and doctor questions), appointments, vitals, clinical history and profiles, with PDF export and Health Connect integration.',
         tech: ['Mobile', 'Health', 'Android'],
+        layout: 'phone',
         cover: 'assets/img/pills/pills-historial.png',
         gallery: [
           'assets/img/pills/pills-historial.png',

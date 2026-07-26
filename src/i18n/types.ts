@@ -25,6 +25,8 @@ export type PortfolioProject = {
   cover: string;
   gallery: string[];
   demo?: string;
+  /** phone = mobile screenshot framing; web = full-bleed cover */
+  layout?: 'phone' | 'web';
 };
 
 export type SkillIcon = {
@@ -68,7 +70,6 @@ export type Dictionary = {
     typedItems: string;
     tagline: string;
     ctaExperience: string;
-    ctaPills: string;
   };
   about: {
     title: string;
