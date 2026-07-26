@@ -41,6 +41,8 @@ export type Dictionary = {
     description: string;
     keywords: string;
     lang: string;
+    ogImage?: string;
+    ogImageAlt?: string;
   };
   profile: {
     name: string;

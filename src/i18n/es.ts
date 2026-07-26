@@ -26,10 +26,14 @@ const microsoft: Dictionary['resume']['microsoft'] = [
 
 export const es: Dictionary = {
   meta: {
-    title: 'Curriculum Vitae',
-    description: 'Curriculum Vitae de Raúl Ripollés García — Consultor, desarrollador e implantador HIS/QA',
-    keywords: 'Curriculum, vitae, consultor, QA, tester, implantador',
+    title: 'Raúl Ripollés García | Consultor HIS & Desarrollador',
+    description:
+      'Portfolio de Raúl Ripollés García: consultor e implantador HIS/QA en el sector sanitario, desarrollo web y apps (Flutter). Valencia / Madrid · Remoto.',
+    keywords:
+      'Raúl Ripollés, portfolio, consultor HIS, QA, implantador, Flutter, desarrollo web, Valencia, Madrid',
     lang: 'es-ES',
+    ogImage: 'assets/img/profile3-img.jpg',
+    ogImageAlt: 'Foto de perfil de Raúl Ripollés García',
   },
   profile: {
     name: 'Raul Ripollés García',
@@ -187,7 +191,7 @@ export const es: Dictionary = {
         subtitle: 'App de salud',
         description:
           'Aplicación móvil de salud para gestionar medicamentos, parte médica (dolor, notas y preguntas al médico), citas, constantes vitales, historial clínico y perfiles, con exportación a PDF e integración con Health Connect.',
-        tech: ['Mobile', 'Salud', 'Android'],
+        tech: ['Flutter', 'Dart', 'SQLite'],
         layout: 'phone',
         cover: 'assets/img/pills/pills-historial.png',
         gallery: [

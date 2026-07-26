@@ -3,10 +3,14 @@ import { es } from './es';
 
 export const en: Dictionary = {
   meta: {
-    title: 'Curriculum Vitae',
-    description: 'Curriculum Vitae of Raúl Ripollés García — Consultant, developer and HIS/QA implementer',
-    keywords: 'Curriculum, vitae, consultant, QA, tester, implementer',
+    title: 'Raúl Ripollés García | HIS Consultant & Developer',
+    description:
+      'Portfolio of Raúl Ripollés García: HIS/QA consultant and implementer in healthcare, web development and apps (Flutter). Valencia / Madrid · Remote.',
+    keywords:
+      'Raúl Ripollés, portfolio, HIS consultant, QA, implementer, Flutter, web development, Valencia, Madrid',
     lang: 'en-US',
+    ogImage: 'assets/img/profile3-img.jpg',
+    ogImageAlt: 'Profile photo of Raúl Ripollés García',
   },
   profile: {
     name: 'Raul Ripollés García',
@@ -158,7 +162,7 @@ export const en: Dictionary = {
         subtitle: 'Health app',
         description:
           'Mobile health app to manage medications, medical reports (pain mapping, clinical notes and doctor questions), appointments, vitals, clinical history and profiles, with PDF export and Health Connect integration.',
-        tech: ['Mobile', 'Health', 'Android'],
+        tech: ['Flutter', 'Dart', 'SQLite'],
         layout: 'phone',
         cover: 'assets/img/pills/pills-historial.png',
         gallery: [

@@ -14,6 +14,10 @@ if (!base.endsWith('/')) base += '/';
 const pageUrl = locale === 'es' ? `${site}${base}` : `${site}${base}en/`;
 const esUrl = `${site}${base}`;
 const enUrl = `${site}${base}en/`;
+const ogImagePath = t.meta.ogImage ?? 'assets/img/profile3-img.jpg';
+const ogImage = `${site}${base}${ogImagePath.replace(/^\//, '')}`;
+const ogLocale = locale === 'es' ? 'es_ES' : 'en_US';
+const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
 ---
 
 <!doctype html>
@@ -24,16 +28,30 @@ const enUrl = `${site}${base}en/`;
     <title>{t.meta.title}</title>
     <meta content={t.meta.keywords} name="keywords" />
     <meta name="description" content={t.meta.description} />
-    <meta name="lang" content={t.meta.lang} />
-    <meta name="Author" content="Raul Ripollés" />
+    <meta name="author" content="Raúl Ripollés García" />
+    <meta name="theme-color" content="#149ddd" />
+    <link rel="canonical" href={pageUrl} />
     <link rel="alternate" hreflang="es" href={esUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={esUrl} />
+
     <meta property="og:url" content={pageUrl} />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content={t.meta.title} />
+    <meta property="og:site_name" content="Raúl Ripollés García" />
     <meta property="og:title" content={t.meta.title} />
     <meta property="og:description" content={t.meta.description} />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:alt" content={t.meta.ogImageAlt ?? t.profile.imageAlt} />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={t.meta.title} />
+    <meta name="twitter:description" content={t.meta.description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={t.meta.ogImageAlt ?? t.profile.imageAlt} />
 
     <link href={withBase('assets/img/favicon.png')} rel="icon" />
     <link href={withBase('assets/img/favicon.png')} rel="shortcut icon" />
