@@ -205,7 +205,7 @@ export const es: Dictionary = {
           'assets/img/pills/pills-perfil.webp',
           'assets/img/pills/pills-config.webp',
         ],
-        demo: 'assets/img/pills/pills-med.mp4',
+        demo: 'assets/img/pills/pills-med.mp4?v=2',
       },
       {
         filter: 'filter-web',
