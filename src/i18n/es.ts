@@ -60,7 +60,6 @@ export const es: Dictionary = {
     typedItems: 'Consultor, Desarrollador, Implantador, Testeador QA',
     tagline: 'Implantación HIS y desarrollo en el sector sanitario.',
     ctaExperience: 'Ver experiencia',
-    ctaPills: 'Ver Pills',
   },
   about: {
     title: 'Perfil',

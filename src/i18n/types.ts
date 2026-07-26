@@ -70,7 +70,6 @@ export type Dictionary = {
     typedItems: string;
     tagline: string;
     ctaExperience: string;
-    ctaPills: string;
   };
   about: {
     title: string;

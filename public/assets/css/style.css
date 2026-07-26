@@ -332,18 +332,6 @@ h6 {
   color: #fff;
 }
 
-#hero .hero-cta-secondary {
-  background: transparent;
-  color: #fff;
-  border: 2px solid rgba(255, 255, 255, 0.85);
-}
-
-#hero .hero-cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.12);
-  color: #fff;
-  border-color: #fff;
-}
-
 .fa, .fab, .fad, .fal, .far, .fas {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;

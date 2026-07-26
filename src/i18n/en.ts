@@ -31,7 +31,6 @@ export const en: Dictionary = {
     typedItems: 'Consultant, Developer, Implanter, QA Tester',
     tagline: 'HIS implementation and development in healthcare.',
     ctaExperience: 'View experience',
-    ctaPills: 'View Pills',
   },
   about: {
     title: 'Profile',
