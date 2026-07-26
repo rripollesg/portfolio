@@ -14,7 +14,7 @@ if (!base.endsWith('/')) base += '/';
 const pageUrl = locale === 'es' ? `${site}${base}` : `${site}${base}en/`;
 const esUrl = `${site}${base}`;
 const enUrl = `${site}${base}en/`;
-const ogImagePath = t.meta.ogImage ?? 'assets/img/profile3-img.jpg';
+const ogImagePath = t.meta.ogImage ?? 'assets/img/profile3-img.webp';
 const ogImage = `${site}${base}${ogImagePath.replace(/^\//, '')}`;
 const ogLocale = locale === 'es' ? 'es_ES' : 'en_US';
 const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
@@ -44,7 +44,7 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <meta property="og:locale:alternate" content={ogLocaleAlt} />
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:secure_url" content={ogImage} />
-    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:type" content="image/webp" />
     <meta property="og:image:alt" content={t.meta.ogImageAlt ?? t.profile.imageAlt} />
 
     <meta name="twitter:card" content="summary" />
@@ -80,7 +80,7 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
     <link href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')} rel="stylesheet" />
     <link href={withBase('assets/vendor/boxicons/css/boxicons.min.css')} rel="stylesheet" />
     <link href={withBase('assets/vendor/swiper/swiper-bundle.min.css')} rel="stylesheet" />
-    <link href={`${withBase('assets/css/style.css')}?v=6.0.5`} rel="stylesheet" />
+    <link href={`${withBase('assets/css/style.css')}?v=6.0.6`} rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
