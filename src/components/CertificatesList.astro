@@ -6,80 +6,21 @@ interface Props {
   items: ResumeItem[];
   viewLabel: string;
   microsoftLabel: string;
+  moreLabel: string;
   microsoft: ResumeItem[];
   accordionId: string;
 }
 
-const { items, viewLabel, microsoftLabel, microsoft, accordionId } = Astro.props;
-const before = items.slice(0, 7);
-const after = items.slice(7);
+const { items, viewLabel, microsoftLabel, moreLabel, microsoft, accordionId } = Astro.props;
+const featured = items.filter((item) => item.featured);
+const more = items.filter((item) => !item.featured);
+const moreId = `${accordionId}-more`;
+const microsoftId = `${accordionId}-ms`;
 ---
 
 {
-  before.map((item) => (
-    <div class="resume-item">
-      <h4>{item.title}</h4>
-      <h5>{item.period}</h5>
-      <p>
-        <em>{item.place}</em>
-      </p>
-          {item.file && (
-            <p>
-              <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">{viewLabel}</a>
-            </p>
-          )}
-        </div>
-      ))
-    }
-
-<div class="resume-item">
-  <div class="accordion" id={accordionId}>
-    <div class="accordion-item">
-      <h2 class="accordion-header" id={`${accordionId}-heading`}>
-        <button
-          class="accordion-button collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target={`#${accordionId}-collapse`}
-          aria-expanded="false"
-          aria-controls={`${accordionId}-collapse`}
-        >
-          {microsoftLabel}
-        </button>
-      </h2>
-      <div
-        id={`${accordionId}-collapse`}
-        class="accordion-collapse collapse"
-        aria-labelledby={`${accordionId}-heading`}
-        data-bs-parent={`#${accordionId}`}
-      >
-        <div class="accordion-body">
-          {
-            microsoft.map((item) => (
-              <div class="mb-3">
-                <h5>{item.title}</h5>
-                <p>
-                  <em>{item.period}</em>
-                </p>
-                {item.file && (
-                  <p>
-                    <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">
-                      {viewLabel}
-                    </a>
-                  </p>
-                )}
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-{
-  after.map((item) => (
-    <div class="resume-item">
+  featured.map((item) => (
+    <div class="resume-item resume-item-featured">
       <h4>{item.title}</h4>
       <h5>{item.period}</h5>
       <p>
@@ -87,9 +28,110 @@ const after = items.slice(7);
       </p>
       {item.file && (
         <p>
-          <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">{viewLabel}</a>
+          <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">
+            {viewLabel}
+          </a>
         </p>
       )}
     </div>
   ))
+}
+
+{
+  more.length > 0 && (
+    <div class="resume-item resume-item-accordion">
+      <div class="accordion" id={moreId}>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id={`${moreId}-heading`}>
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#${moreId}-collapse`}
+              aria-expanded="false"
+              aria-controls={`${moreId}-collapse`}
+            >
+              {moreLabel}
+              <span class="cert-count">{more.length}</span>
+            </button>
+          </h2>
+          <div
+            id={`${moreId}-collapse`}
+            class="accordion-collapse collapse"
+            aria-labelledby={`${moreId}-heading`}
+            data-bs-parent={`#${moreId}`}
+          >
+            <div class="accordion-body">
+              {more.map((item) => (
+                <div class="cert-compact">
+                  <h5>{item.title}</h5>
+                  <p>
+                    <em>
+                      {item.period}
+                      {item.place ? ` — ${item.place}` : ''}
+                    </em>
+                  </p>
+                  {item.file && (
+                    <p>
+                      <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">
+                        {viewLabel}
+                      </a>
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+{
+  microsoft.length > 0 && (
+    <div class="resume-item resume-item-accordion">
+      <div class="accordion" id={microsoftId}>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id={`${microsoftId}-heading`}>
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target={`#${microsoftId}-collapse`}
+              aria-expanded="false"
+              aria-controls={`${microsoftId}-collapse`}
+            >
+              {microsoftLabel}
+              <span class="cert-count">{microsoft.length}</span>
+            </button>
+          </h2>
+          <div
+            id={`${microsoftId}-collapse`}
+            class="accordion-collapse collapse"
+            aria-labelledby={`${microsoftId}-heading`}
+            data-bs-parent={`#${microsoftId}`}
+          >
+            <div class="accordion-body">
+              {microsoft.map((item) => (
+                <div class="cert-compact">
+                  <h5>{item.title}</h5>
+                  <p>
+                    <em>{item.period}</em>
+                  </p>
+                  {item.file && (
+                    <p>
+                      <a href={withBase(item.file)} target="_blank" rel="noopener noreferrer">
+                        {viewLabel}
+                      </a>
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }

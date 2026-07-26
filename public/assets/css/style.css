@@ -5,20 +5,36 @@
 */
 
 /*--------------------------------------------------------------
+# Design tokens
+--------------------------------------------------------------*/
+:root {
+  --font-body: "Source Sans 3", sans-serif;
+  --font-display: "Outfit", sans-serif;
+  --color-primary: #149ddd;
+  --color-primary-hover: #2eafec;
+  --color-accent: #2a9d8f;
+  --color-accent-soft: #e6f5f2;
+  --color-ink: #12263a;
+  --color-ink-soft: #173b6c;
+  --color-muted: #5c6b7a;
+  --color-surface: #f5f8fd;
+}
+
+/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   color: #272829;
 }
 
 a {
-  color: #149ddd;
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: #37b3ed;
+  color: var(--color-primary-hover);
   text-decoration: none;
 }
 
@@ -28,7 +44,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-display);
 }
 
 /*--------------------------------------------------------------
@@ -41,7 +57,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #149ddd;
+  background: var(--color-primary);
   width: 40px;
   height: 40px;
   border-radius: 50px;
@@ -95,7 +111,7 @@ h6 {
   font-weight: 600;
   -moz-text-align-last: center;
   text-align-last: center;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
 }
 
 #header .profile h1 a,
@@ -278,14 +294,14 @@ h6 {
   color: #fff;
   margin: 0 0 12px 0;
   font-size: 26px;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
 }
 
 #hero .hero-typed span {
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid var(--color-accent);
 }
 
 #hero .hero-tagline {
@@ -293,7 +309,7 @@ h6 {
   margin: 0 0 28px 0;
   font-size: 1.05rem;
   line-height: 1.5;
-  font-family: "Open Sans", sans-serif;
+  font-family: var(--font-body);
   max-width: 34rem;
   margin-left: auto;
   margin-right: auto;
@@ -312,7 +328,7 @@ h6 {
   justify-content: center;
   min-height: 44px;
   padding: 0.65rem 1.35rem;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -397,7 +413,7 @@ section {
   padding-bottom: 20px;
   position: relative;
   
-  color: #173b6c;
+  color: var(--color-ink-soft);
 }
 
 .section-title h2::after {
@@ -406,7 +422,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
   bottom: 0;
   left: calc(50% - 20px)
 }
@@ -523,9 +539,9 @@ section {
   padding: 0.4rem 0.75rem;
   font-size: 0.85rem;
   line-height: 1.3;
-  color: #173b6c;
-  background: #eef5fb;
-  border: 1px solid #d7e6f4;
+  color: var(--color-ink-soft);
+  background: var(--color-accent-soft);
+  border: 1px solid #c8e6e0;
   border-radius: 4px;
 }
 
@@ -552,7 +568,7 @@ section {
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   color: #050d18;
 }
 
@@ -596,7 +612,7 @@ section {
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-display);
   color: #050d18;
   margin-bottom: 10px;
 }
@@ -633,6 +649,105 @@ section {
   top: 0;
   background: #fff;
   border: 2px solid #1f5297;
+}
+
+.resume .resume-item-featured {
+  border-left-color: var(--color-accent);
+}
+
+.resume .resume-item-featured::before {
+  border-color: var(--color-accent);
+  background: var(--color-accent-soft);
+}
+
+.resume .resume-item-featured h4 {
+  color: var(--color-ink);
+}
+
+.resume .resume-item-featured h5 {
+  background: var(--color-accent-soft);
+  color: #1d6b61;
+  border-radius: 4px;
+}
+
+.resume .resume-item-accordion {
+  padding-bottom: 16px;
+}
+
+.resume .resume-item-accordion .accordion-item {
+  border: 1px solid #d7e3f0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.resume .resume-item-accordion .accordion-button {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  background: #f7fafc;
+  box-shadow: none;
+  gap: 0.5rem;
+}
+
+.resume .resume-item-accordion .accordion-button:not(.collapsed) {
+  background: var(--color-accent-soft);
+  color: #1d6b61;
+  box-shadow: none;
+}
+
+.resume .resume-item-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: #d7e3f0;
+}
+
+.resume .resume-item-accordion .cert-count {
+  margin-left: auto;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: #e8f4fc;
+  border-radius: 999px;
+  min-width: 1.6rem;
+  height: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.4rem;
+}
+
+.resume .resume-item-accordion .accordion-button:not(.collapsed) .cert-count {
+  color: #1d6b61;
+  background: #fff;
+}
+
+.resume .cert-compact {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid #eef3f8;
+}
+
+.resume .cert-compact:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.resume .cert-compact h5 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-ink);
+  margin: 0 0 0.25rem;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  display: block;
+}
+
+.resume .cert-compact p {
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+  color: var(--color-muted);
 }
 
 .resume .resume-item li.aptitudes{
