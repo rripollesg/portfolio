@@ -66,6 +66,9 @@ export type Dictionary = {
   };
   hero: {
     typedItems: string;
+    tagline: string;
+    ctaExperience: string;
+    ctaPills: string;
   };
   about: {
     title: string;

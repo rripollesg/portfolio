@@ -6,15 +6,18 @@ interface Props {
 }
 
 const { t } = Astro.props;
+const h = t.hero;
 ---
 
 <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <canvas id="canvas" aria-hidden="true"></canvas>
   <div class="hero-container" data-aos="fade-in">
     <h1>{t.profile.shortName}</h1>
-    <p><span class="typed" data-typed-items={t.hero.typedItems}></span></p>
-    <canvas id="canvas"></canvas>
-    <a href="#about" class="btn-get-started" aria-label="About">
-      <i class="fas fa-arrow-down"></i>
-    </a>
+    <p class="hero-typed"><span class="typed" data-typed-items={h.typedItems}></span></p>
+    <p class="hero-tagline">{h.tagline}</p>
+    <div class="hero-actions">
+      <a href="#resume" class="hero-cta hero-cta-primary scrollto">{h.ctaExperience}</a>
+      <a href="#portfolio" class="hero-cta hero-cta-secondary scrollto">{h.ctaPills}</a>
+    </div>
   </div>
 </section>

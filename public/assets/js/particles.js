@@ -4,14 +4,14 @@
 
   const drawArea = canvasBody.getContext('2d');
   const opts = {
-    particleColor: 'rgb(200,200,200)',
-    lineColor: 'rgb(200,200,200)',
-    particleAmount: 30,
-    defaultSpeed: 1,
-    variantSpeed: 1,
-    defaultRadius: 2,
-    variantRadius: 2,
-    linkRadius: 200,
+    particleColor: 'rgba(220,220,220,0.45)',
+    lineColor: 'rgba(200,200,200,0.35)',
+    particleAmount: 18,
+    defaultSpeed: 0.35,
+    variantSpeed: 0.35,
+    defaultRadius: 1.2,
+    variantRadius: 1.2,
+    linkRadius: 140,
   };
 
   let w, h, particles, tid;
