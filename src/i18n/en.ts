@@ -165,7 +165,7 @@ export const en: Dictionary = {
         period: '2012',
         place: 'Valencia, Spain',
         bullets: ['OS installation, software setup, and basic web work.'],
-        skills: [],
+        skills: ['WordPress', 'SQL', 'PHP'],
       },
     ],
   },
