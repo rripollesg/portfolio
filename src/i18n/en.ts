@@ -4,8 +4,8 @@ import { es } from './es';
 export const en: Dictionary = {
   meta: {
     title: 'Curriculum Vitae',
-    description: 'Curriculum Vitae of Raúl Ripollés García — Consultant, developer and HIS/QA implanter',
-    keywords: 'Curriculum, vitae, consultant, QA, tester, implanter',
+    description: 'Curriculum Vitae of Raúl Ripollés García — Consultant, developer and HIS/QA implementer',
+    keywords: 'Curriculum, vitae, consultant, QA, tester, implementer',
     lang: 'en-US',
   },
   profile: {
@@ -28,7 +28,7 @@ export const en: Dictionary = {
     switchLangHref: '/',
   },
   hero: {
-    typedItems: 'Consultant, Developer, Implanter, QA Tester',
+    typedItems: 'Consultant, Developer, Implementer, QA Tester',
     tagline: 'HIS implementation and development in healthcare.',
     ctaExperience: 'View experience',
   },
@@ -71,17 +71,17 @@ export const en: Dictionary = {
     certificates: [
       { title: 'Generative AI', period: '2025', place: 'Certjoin', file: 'assets/certificados/Certificado_certijoin_generative_IA.pdf', featured: true },
       { title: 'AI for Business Productivity', period: '2025', place: 'EADIC', file: 'assets/certificados/Certificado_IA_productividad_Empresarial.pdf' },
-      { title: 'Cybersecurity essentials', period: '2025', place: 'Linux Foundation', file: 'assets/certificados/cibersecurity_essentials_certificate.pdf', featured: true },
+      { title: 'Cybersecurity Essentials', period: '2025', place: 'Linux Foundation', file: 'assets/certificados/cibersecurity_essentials_certificate.pdf', featured: true },
       { title: 'Cybersecurity', period: '2025', place: 'Cisco Academy', file: 'assets/certificados/Certificado_Ciberseguridad_cisco.pdf', featured: true },
-      { title: 'Javascript Essentials', period: '2024', place: 'Cisco Academy-Instituto Javascript', file: 'assets/certificados/JavaScript_Essentials_1_Badge20230720-28-woq3d9.pdf' },
+      { title: 'JavaScript Essentials', period: '2024', place: 'Cisco Academy — JavaScript Institute', file: 'assets/certificados/JavaScript_Essentials_1_Badge20230720-28-woq3d9.pdf' },
       { title: 'Remote Work Professional Certification', period: '2023', place: 'Certiprof', file: 'assets/certificados/Certificate_Remote_Work_Professional_Certification.pdf' },
       { title: 'Business Model Canvas Essentials', period: '2023', place: 'Certiprof', file: 'assets/certificados/Certificate_business_model_canvas_essentials.pdf' },
       { title: 'Mobile app development course', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_desarrollo_apps.pdf' },
       { title: 'Cybersecurity in Remote Work', period: '2021', place: 'Google', file: 'assets/certificados/certificado_google_ciberseguridad.pdf' },
-      { title: 'Scrum Foundations Professional Certificate (SFPC)', period: '2019', place: 'Valencia-Spain Certiprof', file: 'assets/certificados/Certificado_SCRUM_Raul_Ripolles.pdf', featured: true },
-      { title: 'Diploma in IT administration and security: LE & LPIC1', period: '2018', place: 'Valencia-Spain San Roman', file: 'assets/certificados/titulo_LPIC.pdf', featured: true },
-      { title: 'Cisco CCNA2 routing and switching certificate.', period: '2017', place: 'Valencia-Spain CIPFPM Misericordia', file: 'assets/certificados/Titulos_CCNA2.pdf', featured: true },
-      { title: 'Basic occupational risk prevention certificate.', period: '2015', place: 'Valencia-Spain' },
+      { title: 'Scrum Foundations Professional Certificate (SFPC)', period: '2019', place: 'Valencia, Spain — Certiprof', file: 'assets/certificados/Certificado_SCRUM_Raul_Ripolles.pdf', featured: true },
+      { title: 'Diploma in IT administration and security: LE & LPIC1', period: '2018', place: 'Valencia, Spain — San Roman', file: 'assets/certificados/titulo_LPIC.pdf', featured: true },
+      { title: 'Cisco CCNA2 Routing and Switching', period: '2017', place: 'Valencia, Spain — CIPFPM Misericordia', file: 'assets/certificados/Titulos_CCNA2.pdf', featured: true },
+      { title: 'Basic occupational risk prevention certificate', period: '2015', place: 'Valencia, Spain' },
     ],
     microsoft: es.resume.microsoft,
     jobs: [
@@ -98,7 +98,7 @@ export const en: Dictionary = {
         skills: ['Odoo', 'SERVICETONIC', 'SQL', 'HIS', 'Office 365', 'EHR', 'Teamwork', 'ENS'],
       },
       {
-        title: 'Laberit, Implanter',
+        title: 'Laberit, Implementer',
         period: '2019 – 2024',
         place: 'Valencia, Spain',
         bullets: [
@@ -107,7 +107,7 @@ export const en: Dictionary = {
           'Training of healthcare staff at two hospitals during system implementation.',
           'Execution of functional and automated testing along with N2/N3 support.',
         ],
-        skills: ['Atlassian', 'JIRA', 'SQL', 'Graylog', 'MIRTH-HL7', 'postman', 'Cypress', 'SCRUM', 'KANBAN', 'HIS', 'Office 365', 'EHR', 'Analysis', 'Customer contact', 'Teamwork'],
+        skills: ['Atlassian', 'JIRA', 'SQL', 'Graylog', 'MIRTH-HL7', 'Postman', 'Cypress', 'SCRUM', 'KANBAN', 'HIS', 'Office 365', 'EHR', 'Analysis', 'Stakeholder communication', 'Teamwork'],
       },
       {
         title: 'Sothis, Consultant',
@@ -117,28 +117,28 @@ export const en: Dictionary = {
           'Technical coordination of clinical software deployment in 8 hospitals in the Valencian Community.',
           'Design and execution of ETL processes and advanced SQL queries for patient data migration and integration.',
         ],
-        skills: ['Business central', 'SQL', 'PowerBi', 'Office 365', 'HIS', 'EHR', 'Pentaho'],
+        skills: ['Business Central', 'SQL', 'Power BI', 'Office 365', 'HIS', 'EHR', 'Pentaho'],
       },
       {
         title: 'Intern; University of Valencia (ETSE).',
         period: '2017 - 2017',
         place: 'Valencia, Spain',
-        bullets: ['Functions: Maintenance of electronic equipment, PHP and SQL.'],
+        bullets: ['Maintenance of electronic equipment, PHP and SQL.'],
         skills: ['SQL', 'PHP'],
       },
       {
         title: 'Intern; Generalitat Valenciana DGTIC (Directorate General for Information and Communication Technologies).',
         period: '2015 - 2015',
         place: 'Valencia, Spain',
-        bullets: ['Functions: Cisco switch configuration, smartphone and tablet setup and communication.'],
+        bullets: ['Cisco switch configuration; smartphone and tablet setup and communication.'],
         skills: ['CISCO'],
       },
       {
         title: 'Equipment maintenance; TeamCop.',
         period: '2012 - 2012',
         place: 'Valencia, Spain',
-        bullets: ['Functions: Operating system installation, software, updates and security, website design.'],
-        skills: ['Wordpress', 'SQL', 'PHP'],
+        bullets: ['Operating system installation, software, updates and security, website design.'],
+        skills: ['WordPress', 'SQL', 'PHP'],
       },
     ],
   },
@@ -172,6 +172,7 @@ export const en: Dictionary = {
           'assets/img/pills/pills-perfil.png',
           'assets/img/pills/pills-config.png',
         ],
+        demo: 'assets/img/pills/pills-med.mp4',
       },
       {
         filter: 'filter-web',
@@ -207,7 +208,7 @@ export const en: Dictionary = {
     ],
     groups: es.skills.groups,
     languagesTitle: 'Languages',
-    languages: ['Spanish (Native).', 'Valencian: B1', 'English: B1.'],
+    languages: ['Spanish (native)', 'Valencian: B1', 'English: B1'],
   },
   footer: {
     copyright: 'Copyright',

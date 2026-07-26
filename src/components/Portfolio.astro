@@ -26,6 +26,11 @@ const p = t.portfolio;
       {
         p.projects.map((project) => {
           const layout = project.layout ?? (project.filter.includes('filter-app') ? 'phone' : 'web');
+          const demoHref = project.demo
+            ? /^https?:\/\//i.test(project.demo)
+              ? project.demo
+              : withBase(project.demo)
+            : undefined;
           return (
             <div class={`col-lg-4 col-md-6 portfolio-item ${project.filter}`}>
               <article
@@ -61,8 +66,8 @@ const p = t.portfolio;
                     <button class="portfolio-open" type="button">
                       {p.openGallery}
                     </button>
-                    {project.demo && (
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                    {demoHref && (
+                      <a href={demoHref} target="_blank" rel="noopener noreferrer">
                         {p.demo}
                       </a>
                     )}
