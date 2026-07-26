@@ -8,6 +8,9 @@ interface Props {
 
 const { t } = Astro.props;
 const p = t.portfolio;
+
+const isVideoDemo = (demo?: string) =>
+  !!demo && /\.(mp4|webm|ogg)(\?.*)?$/i.test(demo);
 ---
 
 <section id="portfolio" class="portfolio section-bg">
@@ -26,11 +29,13 @@ const p = t.portfolio;
       {
         p.projects.map((project) => {
           const layout = project.layout ?? (project.filter.includes('filter-app') ? 'phone' : 'web');
-          const demoHref = project.demo
-            ? /^https?:\/\//i.test(project.demo)
-              ? project.demo
-              : withBase(project.demo)
-            : undefined;
+          const videoDemo = isVideoDemo(project.demo) ? withBase(project.demo!) : undefined;
+          const externalDemo =
+            project.demo && !videoDemo
+              ? /^https?:\/\//i.test(project.demo)
+                ? project.demo
+                : withBase(project.demo)
+              : undefined;
           return (
             <div class={`col-lg-4 col-md-6 portfolio-item ${project.filter}`}>
               <article
@@ -41,6 +46,7 @@ const p = t.portfolio;
                 data-tech={project.tech.join('|')}
                 data-layout={layout}
                 data-gallery={project.gallery.map((g) => withBase(g)).join('|')}
+                data-video={videoDemo || undefined}
               >
                 <div class={`portfolio-cover-wrap ${layout === 'phone' ? 'is-phone' : 'is-web'}`}>
                   {layout === 'phone' ? (
@@ -66,8 +72,13 @@ const p = t.portfolio;
                     <button class="portfolio-open" type="button">
                       {p.openGallery}
                     </button>
-                    {demoHref && (
-                      <a href={demoHref} target="_blank" rel="noopener noreferrer">
+                    {videoDemo && (
+                      <button class="portfolio-demo-video" type="button">
+                        {p.demo}
+                      </button>
+                    )}
+                    {externalDemo && (
+                      <a href={externalDemo} target="_blank" rel="noopener noreferrer">
                         {p.demo}
                       </a>
                     )}
@@ -94,6 +105,9 @@ const p = t.portfolio;
     <div class="portfolio-modal-stage">
       <div class="swiper portfolio-modal-main-swiper">
         <div class="swiper-wrapper"></div>
+      </div>
+      <div class="portfolio-modal-video-wrap" hidden>
+        <video class="portfolio-modal-video" controls playsinline preload="metadata"></video>
       </div>
     </div>
     <div class="swiper portfolio-modal-thumbs-swiper">

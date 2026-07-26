@@ -172,7 +172,7 @@
   });
 
   /**
-   * Portfolio modal gallery
+   * Portfolio modal gallery / video demo
    */
   const initPortfolioGallery = () => {
     const modal = select('#portfolioModal');
@@ -183,8 +183,12 @@
     const modalSubtitle = select('.portfolio-modal-subtitle');
     const modalDescription = select('.portfolio-modal-description');
     const modalTech = select('.portfolio-modal-tech');
+    const modalMainSwiperEl = select('.portfolio-modal-main-swiper');
+    const modalThumbsSwiperEl = select('.portfolio-modal-thumbs-swiper');
     const modalMainWrapper = select('.portfolio-modal-main-swiper .swiper-wrapper');
     const modalThumbsWrapper = select('.portfolio-modal-thumbs-swiper .swiper-wrapper');
+    const videoWrap = select('.portfolio-modal-video-wrap');
+    const videoEl = select('.portfolio-modal-video');
     let modalMainSwiper = null;
     let modalThumbsSwiper = null;
 
@@ -199,22 +203,17 @@
       }
     };
 
-    const closeModal = () => {
-      modal.classList.remove('is-visible');
-      modal.setAttribute('aria-hidden', 'true');
-      document.body.classList.remove('portfolio-modal-open');
-      if (modalInner) modalInner.classList.remove('is-phone');
-      destroyModalSwipers();
+    const stopVideo = () => {
+      if (!videoEl) return;
+      videoEl.pause();
+      videoEl.removeAttribute('src');
+      videoEl.load();
     };
 
-    const openModal = (cardEl) => {
-      const galleryRaw = cardEl.getAttribute('data-gallery') || '';
-      const images = galleryRaw.split('|').map((img) => img.trim()).filter(Boolean);
-      if (images.length === 0) return;
-
-      const layout = cardEl.getAttribute('data-layout') || 'web';
+    const fillMeta = (cardEl) => {
       const techRaw = cardEl.getAttribute('data-tech') || '';
       const tech = techRaw.split('|').map((item) => item.trim()).filter(Boolean);
+      const layout = cardEl.getAttribute('data-layout') || 'web';
 
       modalTitle.textContent = cardEl.getAttribute('data-title') || 'Proyecto';
       modalSubtitle.textContent = cardEl.getAttribute('data-subtitle') || '';
@@ -227,6 +226,35 @@
       if (modalInner) {
         modalInner.classList.toggle('is-phone', layout === 'phone');
       }
+      return layout;
+    };
+
+    const closeModal = () => {
+      modal.classList.remove('is-visible', 'is-video');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('portfolio-modal-open');
+      if (modalInner) {
+        modalInner.classList.remove('is-phone', 'is-video');
+      }
+      if (videoWrap) videoWrap.hidden = true;
+      if (modalMainSwiperEl) modalMainSwiperEl.hidden = false;
+      if (modalThumbsSwiperEl) modalThumbsSwiperEl.hidden = false;
+      stopVideo();
+      destroyModalSwipers();
+    };
+
+    const openGallery = (cardEl) => {
+      const galleryRaw = cardEl.getAttribute('data-gallery') || '';
+      const images = galleryRaw.split('|').map((img) => img.trim()).filter(Boolean);
+      if (images.length === 0) return;
+
+      const layout = fillMeta(cardEl);
+      stopVideo();
+      if (videoWrap) videoWrap.hidden = true;
+      if (modalMainSwiperEl) modalMainSwiperEl.hidden = false;
+      if (modalThumbsSwiperEl) modalThumbsSwiperEl.hidden = false;
+      if (modalInner) modalInner.classList.remove('is-video');
+      modal.classList.remove('is-video');
 
       modalMainWrapper.innerHTML = '';
       modalThumbsWrapper.innerHTML = '';
@@ -245,6 +273,8 @@
       modal.classList.add('is-visible');
       modal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('portfolio-modal-open');
+
+      destroyModalSwipers();
 
       modalThumbsSwiper = new Swiper('.portfolio-modal-thumbs-swiper', {
         spaceBetween: 10,
@@ -273,10 +303,37 @@
       });
     };
 
+    const openVideo = (cardEl) => {
+      const videoSrc = cardEl.getAttribute('data-video');
+      if (!videoSrc || !videoEl || !videoWrap) return;
+
+      fillMeta(cardEl);
+      destroyModalSwipers();
+      modalMainWrapper.innerHTML = '';
+      modalThumbsWrapper.innerHTML = '';
+
+      if (modalMainSwiperEl) modalMainSwiperEl.hidden = true;
+      if (modalThumbsSwiperEl) modalThumbsSwiperEl.hidden = true;
+      videoWrap.hidden = false;
+      if (modalInner) modalInner.classList.add('is-video');
+      modal.classList.add('is-visible', 'is-video');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('portfolio-modal-open');
+
+      videoEl.src = videoSrc;
+      videoEl.play().catch(() => {});
+    };
+
     on('click', '.portfolio-open', function(e) {
       e.preventDefault();
       const cardEl = this.closest('.portfolio-card');
-      if (cardEl) openModal(cardEl);
+      if (cardEl) openGallery(cardEl);
+    }, true);
+
+    on('click', '.portfolio-demo-video', function(e) {
+      e.preventDefault();
+      const cardEl = this.closest('.portfolio-card');
+      if (cardEl) openVideo(cardEl);
     }, true);
 
     on('click', '.portfolio-modal-close', function() {
