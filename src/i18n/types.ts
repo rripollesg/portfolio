@@ -5,6 +5,7 @@ export type ResumeItem = {
   period: string;
   place: string;
   file?: string;
+  featured?: boolean;
 };
 
 export type Job = {
@@ -93,6 +94,7 @@ export type Dictionary = {
     experienceTitle: string;
     viewCertificate: string;
     microsoftGroup: string;
+    moreCertificates: string;
     education: ResumeItem[];
     certificates: ResumeItem[];
     microsoft: ResumeItem[];
