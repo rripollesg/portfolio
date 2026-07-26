@@ -46,6 +46,9 @@ const isVideoDemo = (demo?: string) =>
                 data-tech={project.tech.join('|')}
                 data-layout={layout}
                 data-gallery={project.gallery.map((g) => withBase(g)).join('|')}
+                data-gallery-alts={project.gallery
+                  .map((_, i) => `${project.title} — ${project.subtitle} (${i + 1})`)
+                  .join('|')}
                 data-video={videoDemo || undefined}
               >
                 <div class={`portfolio-cover-wrap ${layout === 'phone' ? 'is-phone' : 'is-web'}`}>
@@ -54,14 +57,14 @@ const isVideoDemo = (demo?: string) =>
                       <img
                         src={withBase(project.cover)}
                         class="portfolio-cover"
-                        alt={project.title}
+                        alt={`${project.title} — ${project.subtitle}`}
                       />
                     </div>
                   ) : (
                     <img
                       src={withBase(project.cover)}
                       class="portfolio-cover"
-                      alt={project.title}
+                      alt={`${project.title} — ${project.subtitle}`}
                     />
                   )}
                 </div>

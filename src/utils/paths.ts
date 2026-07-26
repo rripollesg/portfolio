@@ -2,11 +2,12 @@
 export function withBase(path: string): string {
   let base = import.meta.env.BASE_URL || '/';
   if (!base.endsWith('/')) base += '/';
-  const normalized = path.replace(/^\//, '');
+  const [pathname, query] = path.split('?');
+  const normalized = pathname.replace(/^\//, '');
   // Codifica cada segmento (espacios, acentos) sin romper las barras.
   const encoded = normalized
     .split('/')
     .map((segment) => encodeURIComponent(segment))
     .join('/');
-  return `${base}${encoded}`;
+  return query ? `${base}${encoded}?${query}` : `${base}${encoded}`;
 }

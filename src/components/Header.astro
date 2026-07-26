@@ -23,7 +23,9 @@ const switchHref = withBase(t.nav.switchLangHref);
         class="img-fluid rounded-circle"
         width="600"
         height="600"
-        loading="lazy"
+        loading="eager"
+        fetchpriority="high"
+        decoding="async"
       />
       <h1 class="text-light"><a href={homeHref}>{t.profile.name}</a></h1>
       <div class="social-links mt-3 text-center">
