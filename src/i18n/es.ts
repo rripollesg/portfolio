@@ -188,6 +188,7 @@ export const es: Dictionary = {
         description:
           'Aplicación móvil de salud para gestionar medicamentos, parte médica (dolor, notas y preguntas al médico), citas, constantes vitales, historial clínico y perfiles, con exportación a PDF e integración con Health Connect.',
         tech: ['Mobile', 'Salud', 'Android'],
+        layout: 'phone',
         cover: 'assets/img/pills/pills-historial.png',
         gallery: [
           'assets/img/pills/pills-historial.png',
