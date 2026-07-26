@@ -473,6 +473,15 @@ section {
   margin-bottom: 0;
 }
 
+.resume .section-title p {
+  text-align: left;
+  max-width: 52rem;
+  margin-left: 0;
+  margin-right: auto;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -950,6 +959,15 @@ section {
   background: #0e86bd;
 }
 
+.portfolio-actions .portfolio-demo-video {
+  background: #e9f4fc;
+  color: #173b6c;
+}
+
+.portfolio-actions .portfolio-demo-video:hover {
+  background: #d1ebfa;
+}
+
 .portfolio-actions a {
   background: #e9f4fc;
   color: #173b6c;
@@ -1081,6 +1099,36 @@ section {
   object-fit: contain;
   border-radius: 1.1rem;
   border: 2px solid #2a3348;
+  background: #05080f;
+}
+
+.portfolio-modal-video-wrap {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.portfolio-modal-video-wrap[hidden] {
+  display: none;
+}
+
+.portfolio-modal-video {
+  width: 100%;
+  max-height: min(70vh, 720px);
+  border-radius: 12px;
+  background: #05080f;
+}
+
+.portfolio-modal-inner.is-phone.is-video .portfolio-modal-stage {
+  padding: 1.25rem 0.75rem;
+}
+
+.portfolio-modal-inner.is-phone .portfolio-modal-video {
+  width: min(280px, 78vw);
+  max-height: min(72vh, 640px);
+  border-radius: 1.1rem;
+  border: 2px solid #2a3348;
+  object-fit: contain;
   background: #05080f;
 }
 
