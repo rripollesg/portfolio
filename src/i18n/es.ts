@@ -65,7 +65,7 @@ export const es: Dictionary = {
     birthLabel: 'Fecha Nacimiento:',
     birthValue: '06/11/1992',
     locationLabel: 'Localización:',
-    locationValue: 'Valencia / Madrid.',
+    locationValue: 'Valencia / Madrid, ES | Remoto',
     extraLabel: 'Competencias clave:',
     extras: [
       'Comunicación con equipos técnicos y funcionales',
@@ -80,7 +80,7 @@ export const es: Dictionary = {
   resume: {
     title: 'Experiencia',
     intro:
-      'Experiencia profesional en el sector sanitario, especializada en la implantación de sistemas HIS (Hospital Information System) en hospitales internacionales. Participación activa en procesos de transformación digital, apoyando a profesionales sanitarios en la adaptación a nuevas metodologías de trabajo. Actualmente en desarrollo continuo de competencias en programación.',
+      'Experiencia profesional en el sector sanitario, especializado en la implantación de sistemas HIS (Hospital Information System) en hospitales internacionales. Participación activa en procesos de transformación digital, apoyando a profesionales sanitarios en la adaptación a nuevas metodologías de trabajo. Actualmente en desarrollo continuo de competencias en programación.',
     educationTab: 'Educación',
     experienceTab: 'Experiencia profesional',
     educationTitle: 'Educación',
@@ -195,6 +195,7 @@ export const es: Dictionary = {
           'assets/img/pills/pills-evolucion.png',
           'assets/img/pills/pills-preguntas.png',
           'assets/img/pills/pills-perfil.png',
+          'assets/img/pills/pills-equipo-config.png',
         ],
       },
       {

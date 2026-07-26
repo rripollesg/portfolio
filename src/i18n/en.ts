@@ -36,7 +36,7 @@ export const en: Dictionary = {
     birthLabel: 'Birth date:',
     birthValue: '06/11/1992',
     locationLabel: 'Location:',
-    locationValue: 'Valencia / Madrid.',
+    locationValue: 'Valencia / Madrid, ES | Remote',
     extraLabel: 'Key competencies:',
     extras: [
       'Communication with technical and functional teams',
@@ -166,6 +166,7 @@ export const en: Dictionary = {
           'assets/img/pills/pills-evolucion.png',
           'assets/img/pills/pills-preguntas.png',
           'assets/img/pills/pills-perfil.png',
+          'assets/img/pills/pills-equipo-config.png',
         ],
       },
       {
