@@ -473,6 +473,15 @@ section {
   margin-bottom: 0;
 }
 
+.resume .section-title p {
+  text-align: left;
+  max-width: 52rem;
+  margin-left: 0;
+  margin-right: auto;
+  line-height: 1.65;
+  color: var(--color-muted);
+}
+
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
