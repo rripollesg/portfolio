@@ -511,7 +511,7 @@ section {
 .resume .section-title p {
   text-align: left;
   max-width: 52rem;
-  margin-left: 0;
+  margin-left: auto;
   margin-right: auto;
   line-height: 1.65;
   color: var(--color-muted);
