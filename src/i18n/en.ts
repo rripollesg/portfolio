@@ -23,7 +23,7 @@ export const en: Dictionary = {
     home: 'Home',
     about: 'Profile',
     resume: 'Work experience',
-    portfolio: 'Portfolio',
+    portfolio: 'Projects',
     skills: 'Skills',
     downloadCv: 'Download CV',
     cvFile: 'docs/CV-Raul-Ripolles-Garcia-EN.pdf',
@@ -170,7 +170,7 @@ export const en: Dictionary = {
     ],
   },
   portfolio: {
-    title: 'Portfolio',
+    title: 'Projects',
     filterAll: 'All',
     filterWeb: 'Web',
     filterApps: 'Apps',

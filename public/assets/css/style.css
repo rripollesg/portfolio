@@ -1176,7 +1176,7 @@ section {
 
 .portfolio-modal-thumbs-swiper .swiper-slide-thumb-active {
   opacity: 1;
-  outline: 2px solid #149ddd;
+  box-shadow: inset 0 0 0 2px #149ddd;
 }
 
 .portfolio-modal-thumbs-swiper img {
