@@ -1,60 +1,37 @@
-# Portfolio — Astro + i18n
+# Raúl Ripollés García
 
-Sitio estático con **español** (`/`) e **inglés** (`/en/`), listo para GitHub Pages o cualquier servidor estático.
+Portfolio personal: consultor HIS / QA e implantador en el sector sanitario, con desarrollo web y apps.
 
-## Editar contenido
+**Sitio en vivo:** [rripollesg.github.io/portfolio](https://rripollesg.github.io/portfolio/)
 
-Todo el texto vive en:
+## Qué incluye
 
-- `src/i18n/es.ts` — español
-- `src/i18n/en.ts` — inglés
+- Perfil, experiencia y formación
+- Certificados y cursos
+- Proyectos (Pills, Saltapalabra, herramienta anti-IA, …)
+- Habilidades
+- Versión en **español** (`/`) e **inglés** (`/en/`)
+- CV descargable en ambos idiomas
 
-Ahí cambias perfil, experiencia, certificados, proyectos, habilidades, etc.
+## Contenido
 
-## Añadir un idioma (ej. italiano)
+El texto del sitio está en:
 
-1. Copia `src/i18n/es.ts` → `src/i18n/it.ts` y traduce.
-2. En `src/i18n/index.ts`, registra `'it'` en `locales` y en `dictionaries`.
-3. En `astro.config.mjs`, añade `'it'` a `i18n.locales`.
-4. Crea `src/pages/it/index.astro` igual que `en/index.astro` con `locale="it"`.
-5. Ajusta el selector de idioma en los diccionarios (`nav.switchLangHref` / flag).
+- [`src/i18n/es.ts`](src/i18n/es.ts)
+- [`src/i18n/en.ts`](src/i18n/en.ts)
 
-## Desarrollo local
+Imágenes, certificados y CVs van en `public/`.
+
+## Desarrollo
 
 ```bash
 npm install
 npm run dev
 ```
 
-Abre la URL que indique Astro (con base `/portfolio/`).
-
-## Build
-
 ```bash
 npm run build
 npm run preview
 ```
 
-La carpeta `dist/` es lo que se publica.
-
-## GitHub Pages
-
-1. Repo Settings → Pages → Source: **GitHub Actions**
-2. Push a `main` (o `master`): el workflow `.github/workflows/deploy.yml` construye y publica.
-
-`astro.config.mjs` usa `base: '/portfolio'` para `https://rripollesg.github.io/portfolio/`.
-
-## Servidor propio / dominio propio
-
-En `astro.config.mjs`:
-
-```js
-site: 'https://tudominio.com',
-base: '/',
-```
-
-Vuelve a hacer `npm run build` y sube `dist/`.
-
-## Legacy
-
-El HTML antiguo está en `_legacy/` por si quieres consultar algo.
+Hecho con [Astro](https://astro.build/). La publicación en GitHub Pages sale de la rama `main` (workflow en `.github/workflows/`). El trabajo activo suele ir en `v6.0` y se mergea a `main` cuando quieras publicarlo.
