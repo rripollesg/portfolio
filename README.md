@@ -8,7 +8,7 @@ Portfolio personal: consultor HIS / QA e implantador en el sector sanitario, con
 
 - Perfil, experiencia y formación
 - Certificados y cursos
-- Proyectos (Pills, Saltapalabra, herramienta anti-IA, …)
+- Proyectos (Pills, Ladmin Panel, Asistente Virtual WordPress, Combo SEO/GEO/AEO, Saltapalabra, herramienta anti-IA, …)
 - Habilidades
 - Versión en **español** (`/`) e **inglés** (`/en/`)
 - CV descargable en ambos idiomas
