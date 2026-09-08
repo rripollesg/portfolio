@@ -241,6 +241,22 @@ export const en: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
+        title: 'Combo SEO, GEO & AEO',
+        subtitle: 'WordPress plugin',
+        description:
+          'WordPress plugin for classic SEO, GEO (llms.txt / llms-full.txt) and AEO (FAQ/HowTo schema, Speakable, Open Graph), with dashboard, Premium license, export/import and robots.txt editor.',
+        tech: ['WordPress', 'PHP', 'JSON-LD', 'JavaScript'],
+        layout: 'web',
+        cover: 'assets/img/combo-seo/combo-dashboard.webp',
+        gallery: [
+          'assets/img/combo-seo/combo-dashboard.webp',
+          'assets/img/combo-seo/combo-settings.webp',
+          'assets/img/combo-seo/combo-tools.webp',
+        ],
+      },
+      {
+        filter: 'filter-web',
+        badge: 'Web',
         title: 'Saltapalabra',
         subtitle: 'HTML + CSS',
         description: 'Voice and vision interaction interface applied to gamification',

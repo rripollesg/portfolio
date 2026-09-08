@@ -248,6 +248,22 @@ export const es: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
+        title: 'Combo SEO, GEO & AEO',
+        subtitle: 'Plugin WordPress',
+        description:
+          'Plugin de WordPress para SEO clásico, GEO (llms.txt / llms-full.txt) y AEO (schema FAQ/HowTo, Speakable, Open Graph), con panel de control, licencia Premium, exportación/importación y editor de robots.txt.',
+        tech: ['WordPress', 'PHP', 'JSON-LD', 'JavaScript'],
+        layout: 'web',
+        cover: 'assets/img/combo-seo/combo-dashboard.webp',
+        gallery: [
+          'assets/img/combo-seo/combo-dashboard.webp',
+          'assets/img/combo-seo/combo-settings.webp',
+          'assets/img/combo-seo/combo-tools.webp',
+        ],
+      },
+      {
+        filter: 'filter-web',
+        badge: 'Web',
         title: 'Saltapalabra',
         subtitle: 'HTML + CSS',
         description: 'Interfaz de interacción por voz y visión aplicada a gamificación',
