@@ -241,7 +241,7 @@ export const en: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
-        title: 'Combo SEO, GEO & AEO',
+        title: 'AnswerLift',
         subtitle: 'WordPress plugin',
         description:
           'WordPress plugin for classic SEO, GEO (llms.txt / llms-full.txt) and AEO (FAQ/HowTo schema, Speakable, Open Graph), with dashboard, Premium license, export/import and robots.txt editor.',
