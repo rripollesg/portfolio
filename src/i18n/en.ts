@@ -224,6 +224,23 @@ export const en: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
+        title: 'WordPress Virtual Assistant',
+        subtitle: 'WordPress plugin',
+        description:
+          'WordPress plugin for a voice virtual assistant with custom commands, AI integration (OpenAI and other providers), front-end widget and accessibility options (contrast modes, page reading and voice navigation).',
+        tech: ['WordPress', 'PHP', 'JavaScript', 'OpenAI'],
+        layout: 'web',
+        cover: 'assets/img/asistente-virtual/asistente-comandos.webp',
+        gallery: [
+          'assets/img/asistente-virtual/asistente-comandos.webp',
+          'assets/img/asistente-virtual/asistente-config.webp',
+          'assets/img/asistente-virtual/asistente-ia.webp',
+          'assets/img/asistente-virtual/asistente-widget.webp',
+        ],
+      },
+      {
+        filter: 'filter-web',
+        badge: 'Web',
         title: 'Saltapalabra',
         subtitle: 'HTML + CSS',
         description: 'Voice and vision interaction interface applied to gamification',

@@ -231,6 +231,23 @@ export const es: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
+        title: 'Asistente Virtual WordPress',
+        subtitle: 'Plugin WordPress',
+        description:
+          'Plugin de WordPress para un asistente virtual por voz con comandos personalizados, integración de IA (OpenAI y otros proveedores), widget en el front y opciones de accesibilidad (contrastes, lectura de página y navegación por voz).',
+        tech: ['WordPress', 'PHP', 'JavaScript', 'OpenAI'],
+        layout: 'web',
+        cover: 'assets/img/asistente-virtual/asistente-comandos.webp',
+        gallery: [
+          'assets/img/asistente-virtual/asistente-comandos.webp',
+          'assets/img/asistente-virtual/asistente-config.webp',
+          'assets/img/asistente-virtual/asistente-ia.webp',
+          'assets/img/asistente-virtual/asistente-widget.webp',
+        ],
+      },
+      {
+        filter: 'filter-web',
+        badge: 'Web',
         title: 'Saltapalabra',
         subtitle: 'HTML + CSS',
         description: 'Interfaz de interacción por voz y visión aplicada a gamificación',
