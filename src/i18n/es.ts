@@ -264,17 +264,6 @@ export const es: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
-        title: 'Saltapalabra',
-        subtitle: 'HTML + CSS',
-        description: 'Interfaz de interacción por voz y visión aplicada a gamificación',
-        tech: ['HTML', 'JavaScript', 'CSS'],
-        cover: 'assets/img/Saltapalabra.webp',
-        gallery: ['assets/img/Saltapalabra.webp', 'assets/img/Saltapalabra2.webp', 'assets/img/Saltapalabra3.webp'],
-        demo: 'https://saltapalabra.netlify.app/',
-      },
-      {
-        filter: 'filter-web',
-        badge: 'Web',
         title: 'Herramienta Anti-IA para Documentos',
         subtitle: 'HTML + CSS',
         description: 'Aplicacion para ofuscar texto, marcar contenido sensible y proteger archivos frente a uso no autorizado.',
