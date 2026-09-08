@@ -203,6 +203,26 @@ export const en: Dictionary = {
       {
         filter: 'filter-web',
         badge: 'Web',
+        title: 'Ladmin Panel',
+        subtitle: 'Admin dashboard',
+        description:
+          'Web administration system with control panel, users, Kanban tickets, appointments, time clock (manual, QR and facial recognition), departments, finance, CRM, marketing, knowledge base and event audit logs.',
+        tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
+        layout: 'web',
+        cover: 'assets/img/ladmin/ladmin-panel.webp',
+        gallery: [
+          'assets/img/ladmin/ladmin-panel.webp',
+          'assets/img/ladmin/ladmin-usuarios.webp',
+          'assets/img/ladmin/ladmin-tickets.webp',
+          'assets/img/ladmin/ladmin-citas.webp',
+          'assets/img/ladmin/ladmin-fichaje.webp',
+          'assets/img/ladmin/ladmin-departamentos.webp',
+          'assets/img/ladmin/ladmin-auditoria.webp',
+        ],
+      },
+      {
+        filter: 'filter-web',
+        badge: 'Web',
         title: 'Saltapalabra',
         subtitle: 'HTML + CSS',
         description: 'Voice and vision interaction interface applied to gamification',
