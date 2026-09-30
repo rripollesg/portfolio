@@ -213,7 +213,7 @@ export const es: Dictionary = {
         title: 'Ladmin Panel',
         subtitle: 'Panel de administración',
         description:
-          'Sistema de administración web con panel de control, usuarios, tickets Kanban, citas, fichaje (manual, QR y reconocimiento facial), departamentos, finanzas, CRM, marketing, base de conocimiento, auditoría de eventos y perfiles de accesibilidad.',
+          'Sistema de administración web con panel de control, usuarios, tickets Kanban, citas, fichaje (manual, QR y reconocimiento facial), departamentos, finanzas, CRM, marketing con campañas IA, base de conocimiento, auditoría de eventos y perfiles de accesibilidad.',
         tech: ['Laravel', 'PHP', 'MySQL', 'Bootstrap'],
         layout: 'web',
         cover: 'assets/img/ladmin/ladmin-panel.webp',
@@ -226,6 +226,7 @@ export const es: Dictionary = {
           'assets/img/ladmin/ladmin-departamentos.webp',
           'assets/img/ladmin/ladmin-auditoria.webp',
           'assets/img/ladmin/ladmin-accesibilidad.webp',
+          'assets/img/ladmin/ladmin-campana.webp',
         ],
       },
       {
