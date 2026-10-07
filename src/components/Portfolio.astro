@@ -53,11 +53,15 @@ const isVideoDemo = (demo?: string) =>
               >
                 <div class={`portfolio-cover-wrap ${layout === 'phone' ? 'is-phone' : 'is-web'}`}>
                   {layout === 'phone' ? (
-                    <div class="phone-frame" aria-hidden="true">
+                    <div class="phone-frame">
                       <img
                         src={withBase(project.cover)}
                         class="portfolio-cover"
                         alt={`${project.title} — ${project.subtitle}`}
+                        width="360"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
                       />
                     </div>
                   ) : (
@@ -65,6 +69,10 @@ const isVideoDemo = (demo?: string) =>
                       src={withBase(project.cover)}
                       class="portfolio-cover"
                       alt={`${project.title} — ${project.subtitle}`}
+                      width="1024"
+                      height="480"
+                      loading="lazy"
+                      decoding="async"
                     />
                   )}
                 </div>

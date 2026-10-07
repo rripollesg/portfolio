@@ -71,7 +71,14 @@ const switchHref = withBase(t.nav.switchLangHref);
         </li>
         <li role="listitem">
           <a href={switchHref}
-            ><img src={withBase(t.nav.switchLangFlag)} alt={t.nav.switchLangLabel} />
+            ><img
+              src={withBase(t.nav.switchLangFlag)}
+              alt={t.nav.switchLangLabel}
+              width="32"
+              height="32"
+              loading="lazy"
+              decoding="async"
+            />
             &nbsp;{t.nav.switchLangLabel}</a
           >
         </li>
