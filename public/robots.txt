@@ -1,4 +1,45 @@
+# Allow classic search and AI answer/search crawlers (AEO / GEO)
 User-agent: *
 Allow: /
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://rripollesg.github.io/portfolio/sitemap.xml
+
+# LLM / agent context files (GEO)
+# https://rripollesg.github.io/portfolio/llms.txt
+# https://rripollesg.github.io/portfolio/llms-full.txt

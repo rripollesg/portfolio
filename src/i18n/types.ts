@@ -86,6 +86,11 @@ export type Dictionary = {
     summary: string;
     showBirth: boolean;
   };
+  faq: {
+    title: string;
+    intro: string;
+    items: { question: string; answer: string }[];
+  };
   resume: {
     title: string;
     intro: string;

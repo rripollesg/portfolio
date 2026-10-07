@@ -19,24 +19,88 @@ const ogImage = `${site}${base}${ogImagePath.replace(/^\//, '')}`;
 const ogLocale = locale === 'es' ? 'es_ES' : 'en_US';
 const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
 const sameAs = [t.social.linkedin, t.social.github].filter(Boolean);
+const personId = `${pageUrl}#person`;
+const websiteId = `${pageUrl}#website`;
+const faqId = `${pageUrl}#faq`;
+const llmsTxt = `${site}${base}llms.txt`;
+const llmsFull = `${site}${base}llms-full.txt`;
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'Person',
-  name: t.profile.name,
-  alternateName: t.profile.shortName,
-  url: pageUrl,
-  image: ogImage,
-  jobTitle: t.profile.role.replace(/\.$/, ''),
-  description: t.meta.description,
-  email: t.social.email.replace(/^mailto:/, ''),
-  telephone: t.social.phone.replace(/^tel:/, ''),
-  sameAs,
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Valencia',
-    addressCountry: 'ES',
-  },
-  knowsAbout: ['HIS', 'QA', 'SQL', 'Flutter', 'Healthcare IT'],
+  '@graph': [
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: pageUrl,
+      name: t.profile.name,
+      description: t.meta.description,
+      inLanguage: t.meta.lang,
+      publisher: { '@id': personId },
+    },
+    {
+      '@type': 'ProfilePage',
+      '@id': `${pageUrl}#profile`,
+      url: pageUrl,
+      name: t.meta.title,
+      description: t.meta.description,
+      inLanguage: t.meta.lang,
+      isPartOf: { '@id': websiteId },
+      mainEntity: { '@id': personId },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.about-summary', '.faq-answer', '.hero-tagline'],
+      },
+    },
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: t.profile.name,
+      alternateName: t.profile.shortName,
+      url: pageUrl,
+      image: ogImage,
+      jobTitle: t.profile.role.replace(/\.$/, ''),
+      description: t.meta.description,
+      email: t.social.email.replace(/^mailto:/, ''),
+      telephone: t.social.phone.replace(/^tel:/, ''),
+      sameAs,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Valencia',
+        addressRegion: 'Comunidad Valenciana',
+        addressCountry: 'ES',
+      },
+      knowsAbout: [
+        'HIS',
+        'Hospital Information System',
+        'QA',
+        'SQL Server',
+        'HL7',
+        'Flutter',
+        'Healthcare IT',
+        'WordPress',
+        'Laravel',
+        'Answer Engine Optimization',
+        'Generative Engine Optimization',
+      ],
+      worksFor: {
+        '@type': 'Organization',
+        name: 'Tich Consulting (Grupo ASISA)',
+      },
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': faqId,
+      url: `${pageUrl}#faq`,
+      mainEntity: t.faq.items.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    },
+  ],
 };
 ---
 
@@ -55,6 +119,8 @@ const jsonLd = {
     <link rel="alternate" hreflang="es" href={esUrl} />
     <link rel="alternate" hreflang="en" href={enUrl} />
     <link rel="alternate" hreflang="x-default" href={esUrl} />
+    <link rel="alternate" type="text/plain" title="llms.txt" href={llmsTxt} />
+    <link rel="alternate" type="text/plain" title="llms-full.txt" href={llmsFull} />
 
     <meta property="og:url" content={pageUrl} />
     <meta property="og:type" content="profile" />
@@ -107,7 +173,7 @@ const jsonLd = {
     <link href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')} rel="stylesheet" />
     <link href={withBase('assets/vendor/boxicons/css/boxicons.min.css')} rel="stylesheet" />
     <link href={withBase('assets/vendor/swiper/swiper-bundle.min.css')} rel="stylesheet" />
-    <link href={`${withBase('assets/css/style.css')}?v=6.0.9`} rel="stylesheet" />
+    <link href={`${withBase('assets/css/style.css')}?v=6.0.10`} rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"

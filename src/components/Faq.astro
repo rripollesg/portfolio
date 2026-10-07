@@ -1,0 +1,29 @@
+---
+import type { Dictionary } from '../i18n';
+
+interface Props {
+  t: Dictionary;
+}
+
+const { t } = Astro.props;
+const f = t.faq;
+---
+
+<section id="faq" class="faq">
+  <div class="container">
+    <div class="section-title">
+      <h2>{f.title}</h2>
+      <p>{f.intro}</p>
+    </div>
+    <div class="faq-list" data-aos="fade-up">
+      {
+        f.items.map((item) => (
+          <article class="faq-item">
+            <h3 class="faq-question">{item.question}</h3>
+            <p class="faq-answer">{item.answer}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
