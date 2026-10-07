@@ -90,22 +90,17 @@ export const es: Dictionary = {
       {
         question: '¿Quién es Raúl Ripollés García?',
         answer:
-          'Consultor HIS/QA e implantador en el sector sanitario, también desarrollador web y de apps (Flutter). Trabaja desde Valencia / Madrid y en remoto.',
+          'Consultor HIS/QA e implantador en sanidad, y desarrollador web/apps (Flutter). Valencia / Madrid · Remoto.',
       },
       {
         question: '¿En qué se especializa?',
         answer:
-          'Implantación de sistemas HIS, bases de datos SQL Server en entornos sanitarios de alta disponibilidad, soporte N2/N3, integraciones HL7 y desarrollo web/apps.',
+          'Sistemas HIS, SQL Server en alta disponibilidad, soporte N2/N3, HL7 y desarrollo web/apps.',
       },
       {
-        question: '¿Dónde ha trabajado recientemente?',
+        question: '¿Cómo contactar?',
         answer:
-          'En Tich Consulting (Grupo ASISA) como consultor de bases de datos y parametrización; antes en Laberit como implantador HIS e en Sothis como consultor en despliegues multi-hospital.',
-      },
-      {
-        question: '¿Cómo contactar o ver el CV?',
-        answer:
-          'Email r.ripolles@hotmail.com, teléfono +34 644 496 436, LinkedIn y GitHub enlazados en este portfolio. El CV se descarga desde el menú lateral.',
+          'r.ripolles@hotmail.com · +34 644 496 436 · LinkedIn y GitHub en este sitio. CV en el menú lateral.',
       },
     ],
   },

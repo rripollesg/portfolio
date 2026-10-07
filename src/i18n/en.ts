@@ -61,22 +61,17 @@ export const en: Dictionary = {
       {
         question: 'Who is Raúl Ripollés García?',
         answer:
-          'A HIS/QA consultant and implementer in healthcare, and also a web and Flutter app developer. Based in Valencia / Madrid and available remotely.',
+          'HIS/QA consultant and implementer in healthcare, and web/app developer (Flutter). Valencia / Madrid · Remote.',
       },
       {
         question: 'What does he specialize in?',
         answer:
-          'HIS implementation, SQL Server databases in high-availability healthcare environments, N2/N3 support, HL7 integrations, and web/app development.',
+          'HIS systems, high-availability SQL Server, N2/N3 support, HL7, and web/app development.',
       },
       {
-        question: 'Where has he worked recently?',
+        question: 'How can I contact him?',
         answer:
-          'At Tich Consulting (ASISA Group) as a database consultant/parameterization specialist; previously at Laberit as a HIS implementer and at Sothis as a consultant on multi-hospital rollouts.',
-      },
-      {
-        question: 'How can I contact him or get the CV?',
-        answer:
-          'Email r.ripolles@hotmail.com, phone +34 644 496 436, plus LinkedIn and GitHub linked on this portfolio. The CV is available from the sidebar menu.',
+          'r.ripolles@hotmail.com · +34 644 496 436 · LinkedIn and GitHub on this site. CV in the sidebar.',
       },
     ],
   },
