@@ -83,6 +83,37 @@ export const es: Dictionary = {
       'Especializado en administración de sistemas, bases de datos e infraestructuras críticas. Experiencia en entornos sanitarios de alta disponibilidad, seguridad y automatización. Acostumbrado a trabajar con equipos multidisciplinares y proyectos de gran escala.',
     showBirth: true,
   },
+  faq: {
+    title: 'Preguntas frecuentes',
+    intro: 'Respuestas directas sobre el perfil profesional de Raúl Ripollés García.',
+    items: [
+      {
+        question: '¿Quién es Raúl Ripollés García?',
+        answer:
+          'Consultor HIS/QA e implantador en el sector sanitario, también desarrollador web y de apps (Flutter). Trabaja desde Valencia / Madrid y en remoto.',
+      },
+      {
+        question: '¿En qué se especializa?',
+        answer:
+          'Implantación de sistemas HIS, bases de datos SQL Server en entornos sanitarios de alta disponibilidad, soporte N2/N3, integraciones HL7 y desarrollo web/apps.',
+      },
+      {
+        question: '¿Dónde ha trabajado recientemente?',
+        answer:
+          'En Tich Consulting (Grupo ASISA) como consultor de bases de datos y parametrización; antes en Laberit como implantador HIS e en Sothis como consultor en despliegues multi-hospital.',
+      },
+      {
+        question: '¿Qué proyectos destaca?',
+        answer:
+          'Pills (app Flutter de salud), Ladmin Panel (administración Laravel), AnswerLift (plugin WordPress SEO/GEO/AEO) y un asistente virtual por voz para WordPress.',
+      },
+      {
+        question: '¿Cómo contactar o ver el CV?',
+        answer:
+          'Email r.ripolles@hotmail.com, teléfono +34 644 496 436, LinkedIn y GitHub enlazados en este portfolio. El CV se descarga desde el menú lateral.',
+      },
+    ],
+  },
   resume: {
     title: 'Experiencia',
     intro:

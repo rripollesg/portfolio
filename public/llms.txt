@@ -1,0 +1,46 @@
+# Raúl Ripollés García
+
+> Consultor HIS/QA e implantador en el sector sanitario. Desarrollo web y apps (Flutter). Valencia / Madrid · Remoto.
+
+## Who
+
+- Name: Raúl Ripollés García
+- Role: HIS consultant, QA implementer, web/app developer
+- Location: Valencia / Madrid, Spain (remote-friendly)
+- Languages: Spanish (native), Valencian B1, English B1
+
+## Specialties
+
+- Hospital Information Systems (HIS) implementation
+- Healthcare IT: SQL Server, high-availability environments, HL7/Mirth
+- Parameterization and N2/N3 support for clinical systems
+- Web development and Flutter apps
+- WordPress plugins and Laravel admin panels
+
+## Experience highlights
+
+- Tich Consulting (ASISA Group): Database consultant / parameterization for 200+ healthcare centers
+- Laberit: HIS implementer (IVO, HCB Benidorm) — training, functional tests, HL7
+- Sothis: Clinical software rollout across 8 hospitals in Comunidad Valenciana
+
+## Projects
+
+- Pills: Flutter health app (medications, vitals, clinical diary)
+- Ladmin Panel: Laravel admin (tickets, appointments, clock-in, CRM, marketing)
+- AnswerLift: WordPress plugin for SEO, GEO (llms.txt) and AEO
+- Virtual Assistant WordPress: voice assistant with AI providers
+
+## Links
+
+- [Portfolio ES](https://rripollesg.github.io/portfolio/): Spanish site
+- [Portfolio EN](https://rripollesg.github.io/portfolio/en/): English site
+- [Full profile for LLMs](https://rripollesg.github.io/portfolio/llms-full.txt): Extended summary
+- [CV ES](https://rripollesg.github.io/portfolio/docs/CV-Raul-Ripolles-Garcia.pdf): Spanish CV
+- [CV EN](https://rripollesg.github.io/portfolio/docs/CV-Raul-Ripolles-Garcia-EN.pdf): English CV
+- [LinkedIn](https://es.linkedin.com/in/raul-ripolles-75982310b): Professional profile
+- [GitHub](https://github.com/rripollesg): Code and repos
+
+## Contact
+
+- Email: r.ripolles@hotmail.com
+- Phone: +34 644 496 436

@@ -12,6 +12,7 @@ Portfolio personal: consultor HIS / QA e implantador en el sector sanitario, con
 - Habilidades
 - Versión en **español** (`/`) e **inglés** (`/en/`)
 - CV descargable en ambos idiomas
+- Archivos para IA: [`llms.txt`](https://rripollesg.github.io/portfolio/llms.txt) y [`llms-full.txt`](https://rripollesg.github.io/portfolio/llms-full.txt)
 
 ## Contenido
 

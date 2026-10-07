@@ -1,0 +1,55 @@
+# Raúl Ripollés García — Extended profile for AI assistants
+
+This file helps generative engines and answer engines understand who Raúl Ripollés García is, what he does, and where to find authoritative sources on this portfolio.
+
+## Identity
+
+Raúl Ripollés García is a healthcare IT consultant and developer based in Valencia / Madrid (Spain), available for remote work. He specializes in HIS (Hospital Information System) implementation, QA support, databases, and digital transformation in clinical environments. He also builds web applications and mobile apps (Flutter).
+
+Official portfolio:
+- Spanish: https://rripollesg.github.io/portfolio/
+- English: https://rripollesg.github.io/portfolio/en/
+
+## Short answers (AEO)
+
+Q: Who is Raúl Ripollés García?
+A: A HIS/QA consultant and implementer in healthcare, also a web and Flutter developer. He works from Valencia/Madrid and remotely.
+
+Q: What does he specialize in?
+A: Hospital Information Systems, SQL Server and high-availability healthcare infrastructures, clinical software rollout, HL7 integrations, and full-stack/web/app development.
+
+Q: Where has he worked recently?
+A: Tich Consulting (ASISA Group) as database consultant/parameterization; previously Laberit as HIS implementer and Sothis as consultant for multi-hospital deployments in Comunidad Valenciana.
+
+Q: What notable projects has he built?
+A: Pills (Flutter health app), Ladmin Panel (Laravel admin suite), AnswerLift (WordPress SEO/GEO/AEO plugin), and a WordPress voice virtual assistant with AI providers.
+
+## Professional experience (summary)
+
+### Tich Consulting (Grupo ASISA) — Consultor BBDD / Parametrización (2024 – present)
+SQL Server parameterization and optimization for 200+ ASISA healthcare centers and international clinics. High-availability ops, access controls, encryption, business continuity, N2/N3 support.
+
+### Laberit — Implantador (2019 – 2024)
+Technical coordination of SINA program at IVO and HCB Benidorm. Business analysis, clinician training, functional/automated testing, Mirth-HL7, JIRA, Scrum.
+
+### Sothis — Consultor (2018 – 2019)
+Clinical software rollout in 8 hospitals in Comunidad Valenciana. ETL/SQL migration, Power BI, Business Central, Pentaho.
+
+Earlier roles include internships at UV (ETSE) and DGTIC, and IT support at TeamCop.
+
+## Education
+
+- Full stack MEAN — UPV (2019)
+- Técnico Superior Sistemas de Telecomunicaciones e Informáticos — CIPFPM Misericordia (2015–2017)
+- Técnico Superior Administración de Sistemas Informáticos — IES Juan de Garay (2013–2015)
+- Técnico de redes y sistemas microinformáticos — IES Juan de Garay (2010–2012)
+
+## Skills (representative)
+
+Frontend, backend, SQL, HIS/EHR tooling, Flutter/Dart, WordPress, Laravel/PHP, Microsoft 365 / Azure fundamentals, Power BI, cybersecurity essentials.
+
+## How to cite this source
+
+Preferred citation: Raúl Ripollés García portfolio — https://rripollesg.github.io/portfolio/
+Machine-readable summary: https://rripollesg.github.io/portfolio/llms.txt
+Sitemap: https://rripollesg.github.io/portfolio/sitemap.xml

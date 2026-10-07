@@ -54,6 +54,37 @@ export const en: Dictionary = {
       'Specialized in systems administration, databases, and critical infrastructures. Experience in high-availability healthcare environments, security, and automation. Accustomed to working with multidisciplinary teams and large-scale projects.',
     showBirth: false,
   },
+  faq: {
+    title: 'FAQ',
+    intro: 'Direct answers about Raúl Ripollés García’s professional profile.',
+    items: [
+      {
+        question: 'Who is Raúl Ripollés García?',
+        answer:
+          'A HIS/QA consultant and implementer in healthcare, and also a web and Flutter app developer. Based in Valencia / Madrid and available remotely.',
+      },
+      {
+        question: 'What does he specialize in?',
+        answer:
+          'HIS implementation, SQL Server databases in high-availability healthcare environments, N2/N3 support, HL7 integrations, and web/app development.',
+      },
+      {
+        question: 'Where has he worked recently?',
+        answer:
+          'At Tich Consulting (ASISA Group) as a database consultant/parameterization specialist; previously at Laberit as a HIS implementer and at Sothis as a consultant on multi-hospital rollouts.',
+      },
+      {
+        question: 'What projects stand out?',
+        answer:
+          'Pills (Flutter health app), Ladmin Panel (Laravel admin suite), AnswerLift (WordPress SEO/GEO/AEO plugin), and a WordPress voice virtual assistant.',
+      },
+      {
+        question: 'How can I contact him or get the CV?',
+        answer:
+          'Email r.ripolles@hotmail.com, phone +34 644 496 436, plus LinkedIn and GitHub linked on this portfolio. The CV is available from the sidebar menu.',
+      },
+    ],
+  },
   resume: {
     title: 'Experience',
     intro:
