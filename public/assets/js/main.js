@@ -262,14 +262,19 @@
       modalThumbsWrapper.innerHTML = '';
 
       images.forEach((imgSrc, index) => {
-        const altText = (alts[index] || `Vista ${index + 1}`).replace(/"/g, '&quot;');
+        const rawAlt = alts[index] || `${modalTitle.textContent || 'Proyecto'} — vista ${index + 1}`;
+        const altText = String(rawAlt)
+          .replace(/&/g, '&amp;')
+          .replace(/"/g, '&quot;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;');
         modalMainWrapper.insertAdjacentHTML(
           'beforeend',
-          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}"></div>`
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}" width="1024" height="640" loading="lazy" decoding="async"></div>`
         );
         modalThumbsWrapper.insertAdjacentHTML(
           'beforeend',
-          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}"></div>`
+          `<div class="swiper-slide"><img src="${imgSrc}" alt="${altText}" width="160" height="100" loading="lazy" decoding="async"></div>`
         );
       });
 
