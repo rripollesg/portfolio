@@ -309,7 +309,7 @@ export const en: Dictionary = {
     ],
     groups: es.skills.groups,
     languagesTitle: 'Languages',
-    languages: ['Spanish (native)', 'Valencian: B1', 'English: B1'],
+    languages: ['Spanish (native)', 'Valencian: B1', 'English: B2'],
   },
   footer: {
     copyright: 'Copyright',
