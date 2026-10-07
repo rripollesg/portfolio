@@ -1214,9 +1214,9 @@ body.portfolio-modal-open {
 /*--------------------------------------------------------------
 # FAQ (AEO) — discreet accordion
 --------------------------------------------------------------*/
-.faq {
+.faq.section-bg {
   padding: 8px 0 56px;
-  background: transparent;
+  background: #f5f8fd;
 }
 
 .skills.section-bg {
