@@ -345,7 +345,7 @@ export const es: Dictionary = {
       ],
     },
     languagesTitle: 'Idiomas',
-    languages: ['Español (Nativo).', 'Valenciano: B1', 'Ingles: B1.'],
+    languages: ['Español (Nativo).', 'Valenciano: B1', 'Ingles: B2.'],
   },
   footer: {
     copyright: 'Copyright',

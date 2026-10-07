@@ -7,7 +7,7 @@
 - Name: Raúl Ripollés García
 - Role: HIS consultant, QA implementer, web/app developer
 - Location: Valencia / Madrid, Spain (remote-friendly)
-- Languages: Spanish (native), Valencian B1, English B1
+- Languages: Spanish (native), Valencian B1, English B2
 
 ## Specialties
 
