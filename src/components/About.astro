@@ -20,24 +20,24 @@ const a = t.about;
         <h3>{a.headline}</h3>
         <div class="row gy-4">
           <div class="col-lg-5">
-            <ul class="about-meta">
+            <ul class="about-meta" role="list">
               {
                 a.showBirth && (
-                  <li>
-                    <i class="fa-regular fa-calendar"></i>{' '}
+                  <li role="listitem">
+                    <i class="fa-regular fa-calendar" aria-hidden="true"></i>{' '}
                     <strong>{a.birthLabel}</strong> <span>{a.birthValue}</span>
                   </li>
                 )
               }
-              <li>
-                <i class="fa-solid fa-location-dot"></i>{' '}
+              <li role="listitem">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>{' '}
                 <strong>{a.locationLabel}</strong> {a.locationValue}
               </li>
             </ul>
             <p class="about-extras-label">{a.extraLabel}</p>
-            <ul class="about-chips">
+            <ul class="about-chips" role="list">
               {a.extras.map((item) => (
-                <li>{item}</li>
+                <li role="listitem">{item}</li>
               ))}
             </ul>
           </div>

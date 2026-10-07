@@ -47,6 +47,7 @@ const s = t.skills;
                   id={tab.id}
                   role="tabpanel"
                   aria-labelledby={`${tab.id}-tab`}
+                  tabindex="0"
                 >
                   <div class="skills-icons-grid">
                     {(s.groups[tab.id] ?? []).map((icon) =>
