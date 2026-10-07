@@ -21,7 +21,6 @@ const ogLocaleAlt = locale === 'es' ? 'en_US' : 'es_ES';
 const sameAs = [t.social.linkedin, t.social.github].filter(Boolean);
 const personId = `${pageUrl}#person`;
 const websiteId = `${pageUrl}#website`;
-const faqId = `${pageUrl}#faq`;
 const llmsTxt = `${site}${base}llms.txt`;
 const llmsFull = `${site}${base}llms-full.txt`;
 
@@ -48,7 +47,7 @@ const jsonLd = {
       mainEntity: { '@id': personId },
       speakable: {
         '@type': 'SpeakableSpecification',
-        cssSelector: ['.about-summary', '.faq-answer', '.hero-tagline'],
+        cssSelector: ['.about-summary', '.hero-tagline'],
       },
     },
     {
@@ -86,19 +85,6 @@ const jsonLd = {
         '@type': 'Organization',
         name: 'Tich Consulting (Grupo ASISA)',
       },
-    },
-    {
-      '@type': 'FAQPage',
-      '@id': faqId,
-      url: `${pageUrl}#faq`,
-      mainEntity: t.faq.items.map((item) => ({
-        '@type': 'Question',
-        name: item.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: item.answer,
-        },
-      })),
     },
   ],
 };
