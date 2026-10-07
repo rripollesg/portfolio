@@ -85,7 +85,7 @@ export const es: Dictionary = {
   },
   faq: {
     title: 'Preguntas frecuentes',
-    intro: 'Respuestas directas sobre el perfil profesional de Raúl Ripollés García.',
+    intro: 'Respuestas rápidas sobre el perfil.',
     items: [
       {
         question: '¿Quién es Raúl Ripollés García?',
@@ -101,11 +101,6 @@ export const es: Dictionary = {
         question: '¿Dónde ha trabajado recientemente?',
         answer:
           'En Tich Consulting (Grupo ASISA) como consultor de bases de datos y parametrización; antes en Laberit como implantador HIS e en Sothis como consultor en despliegues multi-hospital.',
-      },
-      {
-        question: '¿Qué proyectos destaca?',
-        answer:
-          'Pills (app Flutter de salud), Ladmin Panel (administración Laravel), AnswerLift (plugin WordPress SEO/GEO/AEO) y un asistente virtual por voz para WordPress.',
       },
       {
         question: '¿Cómo contactar o ver el CV?',

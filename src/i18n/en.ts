@@ -56,7 +56,7 @@ export const en: Dictionary = {
   },
   faq: {
     title: 'FAQ',
-    intro: 'Direct answers about Raúl Ripollés García’s professional profile.',
+    intro: 'Quick answers about the profile.',
     items: [
       {
         question: 'Who is Raúl Ripollés García?',
@@ -72,11 +72,6 @@ export const en: Dictionary = {
         question: 'Where has he worked recently?',
         answer:
           'At Tich Consulting (ASISA Group) as a database consultant/parameterization specialist; previously at Laberit as a HIS implementer and at Sothis as a consultant on multi-hospital rollouts.',
-      },
-      {
-        question: 'What projects stand out?',
-        answer:
-          'Pills (Flutter health app), Ladmin Panel (Laravel admin suite), AnswerLift (WordPress SEO/GEO/AEO plugin), and a WordPress voice virtual assistant.',
       },
       {
         question: 'How can I contact him or get the CV?',
