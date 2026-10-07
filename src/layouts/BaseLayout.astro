@@ -151,34 +151,85 @@ const jsonLd = {
     <link href={withBase('assets/img/favicon.png')} rel="shortcut icon" />
     <link href={withBase('assets/img/apple-touch-icon.png')} rel="apple-touch-icon" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+      as="image"
+      href={withBase('assets/img/profile3-img.webp')}
+      type="image/webp"
+      fetchpriority="high"
+    />
+
+    <link href={withBase('assets/vendor/bootstrap/css/bootstrap.min.css')} rel="stylesheet" />
+    <link href={`${withBase('assets/css/style.css')}?v=6.0.14`} rel="stylesheet" />
+
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      as="style"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href={withBase('assets/vendor/aos/aos.css')}
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')}
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href={withBase('assets/vendor/boxicons/css/boxicons.min.css')}
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href={withBase('assets/vendor/swiper/swiper-bundle.min.css')}
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
         rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <link href={withBase('assets/vendor/aos/aos.css')} rel="stylesheet" />
+      <link href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')} rel="stylesheet" />
+      <link href={withBase('assets/vendor/boxicons/css/boxicons.min.css')} rel="stylesheet" />
+      <link href={withBase('assets/vendor/swiper/swiper-bundle.min.css')} rel="stylesheet" />
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
       />
     </noscript>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href={withBase('assets/vendor/aos/aos.css')} rel="stylesheet" />
-    <link href={withBase('assets/vendor/bootstrap/css/bootstrap.min.css')} rel="stylesheet" />
-    <link href={withBase('assets/vendor/bootstrap-icons/bootstrap-icons.css')} rel="stylesheet" />
-    <link href={withBase('assets/vendor/boxicons/css/boxicons.min.css')} rel="stylesheet" />
-    <link href={withBase('assets/vendor/swiper/swiper-bundle.min.css')} rel="stylesheet" />
-    <link href={`${withBase('assets/css/style.css')}?v=6.0.13`} rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
-    />
     <style is:global>
       #hero #canvas {
         position: absolute;
@@ -195,13 +246,13 @@ const jsonLd = {
   <body>
     <slot />
 
-    <script is:inline src={withBase('assets/vendor/aos/aos.js')}></script>
-    <script is:inline src={withBase('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}></script>
-    <script is:inline src={withBase('assets/vendor/isotope-layout/isotope.pkgd.min.js')}></script>
-    <script is:inline src={withBase('assets/vendor/swiper/swiper-bundle.min.js')}></script>
-    <script is:inline src={withBase('assets/vendor/typed.js/typed.min.js')}></script>
-    <script is:inline src={`${withBase('assets/js/main.js')}?v=6.0.7`} defer></script>
+    <script is:inline src={withBase('assets/vendor/aos/aos.js')} defer></script>
+    <script is:inline src={withBase('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')} defer></script>
+    <script is:inline src={withBase('assets/vendor/isotope-layout/isotope.pkgd.min.js')} defer></script>
+    <script is:inline src={withBase('assets/vendor/swiper/swiper-bundle.min.js')} defer></script>
+    <script is:inline src={withBase('assets/vendor/typed.js/typed.min.js')} defer></script>
+    <script is:inline src={`${withBase('assets/js/main.js')}?v=6.0.8`} defer></script>
     <script is:inline src={`${withBase('assets/js/index.js')}?v=6.0.3`} defer></script>
-    <script is:inline src={`${withBase('assets/js/particles.js')}?v=6.0.0`} defer></script>
+    <script is:inline src={`${withBase('assets/js/particles.js')}?v=6.0.1`} defer></script>
   </body>
 </html>
