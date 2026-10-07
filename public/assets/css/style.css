@@ -1212,44 +1212,79 @@ body.portfolio-modal-open {
 
 
 /*--------------------------------------------------------------
-# FAQ (AEO)
+# FAQ (AEO) — discreet accordion
 --------------------------------------------------------------*/
 .faq {
-  padding: 60px 0;
-  background: #f7fafc;
+  padding: 36px 0 56px;
+  background: transparent;
 }
 
-.faq .section-title p {
+.faq-header {
   max-width: 40rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 1rem;
+  text-align: center;
+}
+
+.faq-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+  margin: 0 0 0.35rem;
+}
+
+.faq-intro {
+  margin: 0;
+  font-size: 0.9rem;
   color: var(--color-muted);
 }
 
 .faq-list {
-  max-width: 48rem;
+  max-width: 40rem;
   margin: 0 auto;
-  display: grid;
-  gap: 1rem;
+  border-top: 1px solid #e4ebf2;
 }
 
 .faq-item {
-  background: #fff;
-  padding: 1.15rem 1.35rem;
-  border-left: 3px solid var(--color-accent);
+  border-bottom: 1px solid #e4ebf2;
+  background: transparent;
+  padding: 0;
 }
 
 .faq-question {
-  font-size: 1.05rem;
-  font-weight: 700;
+  list-style: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
   color: #173b6c;
-  margin: 0 0 0.5rem;
+  margin: 0;
+  padding: 0.85rem 1.5rem 0.85rem 0;
+  position: relative;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: 400;
+  color: var(--color-muted);
+}
+
+.faq-item[open] .faq-question::after {
+  content: "–";
 }
 
 .faq-answer {
-  margin: 0;
-  color: #3a3f47;
-  line-height: 1.6;
+  margin: 0 0 0.95rem;
+  padding-right: 1.5rem;
+  font-size: 0.92rem;
+  color: var(--color-muted);
+  line-height: 1.55;
 }
 
 /*--------------------------------------------------------------
