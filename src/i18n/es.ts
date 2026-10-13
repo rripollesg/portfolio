@@ -301,6 +301,7 @@ export const es: Dictionary = {
     tabs: [
       { id: 'FRONTEND', label: 'FRONTEND' },
       { id: 'BACKEND', label: 'BACKEND' },
+      { id: 'IA', label: 'IA / LLMS' },
       { id: 'HERRAMIENTAS', label: 'HERRAMIENTAS' },
       { id: 'APRENDIENDO', label: 'APRENDIENDO' },
     ],
@@ -315,6 +316,17 @@ export const es: Dictionary = {
         { href: 'https://www.mongodb.com/', iconClass: 'devicon-mongodb-plain-wordmark colored' },
         { href: 'https://www.mysql.com/', iconClass: 'devicon-mysql-plain-wordmark' },
         { iconClass: 'devicon-redis-plain-wordmark colored' },
+      ],
+      IA: [
+        { href: 'https://www.python.org/', iconClass: 'devicon-python-plain-wordmark colored', label: 'Python' },
+        { href: 'https://openai.com/', img: 'assets/img/skills/openai.svg', label: 'OpenAI' },
+        { href: 'https://cursor.com/', img: 'assets/img/skills/cursor.svg', label: 'Cursor' },
+        { href: 'https://huggingface.co/', img: 'assets/img/skills/huggingface.svg', label: 'Hugging Face' },
+        { href: 'https://claude.ai/', img: 'assets/img/skills/claude.svg', label: 'Claude' },
+        { href: 'https://gemini.google.com/', img: 'assets/img/skills/gemini.svg', label: 'Gemini' },
+        { href: 'https://ollama.com/', img: 'assets/img/skills/ollama.svg', label: 'Ollama' },
+        { href: 'https://lmstudio.ai/', img: 'assets/img/skills/lmstudio.svg', label: 'LM Studio' },
+        { href: 'https://modelcontextprotocol.io/', img: 'assets/img/skills/mcp.svg', label: 'MCP' },
       ],
       HERRAMIENTAS: [
         { href: 'https://www.docker.com/', iconClass: 'devicon-docker-plain-wordmark colored' },

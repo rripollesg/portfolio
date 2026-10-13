@@ -1,5 +1,6 @@
 ---
 import type { Dictionary } from '../i18n';
+import { withBase } from '../utils/paths';
 
 interface Props {
   t: Dictionary;
@@ -50,17 +51,31 @@ const s = t.skills;
                   tabindex="0"
                 >
                   <div class="skills-icons-grid">
-                    {(s.groups[tab.id] ?? []).map((icon) =>
-                      icon.href ? (
-                        <a href={icon.href} class="skills-icon-link" aria-label={icon.iconClass}>
-                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                    {(s.groups[tab.id] ?? []).map((icon) => {
+                      const label = icon.label ?? icon.iconClass ?? 'skill';
+                      const mark = icon.img ? (
+                        <img
+                          class="skill-icon skill-icon-img"
+                          src={withBase(icon.img)}
+                          alt=""
+                          width="48"
+                          height="48"
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <i class={`skill-icon ${icon.iconClass}`} aria-hidden="true" />
+                      );
+                      return icon.href ? (
+                        <a href={icon.href} class="skills-icon-link" aria-label={label}>
+                          {mark}
                         </a>
                       ) : (
-                        <span class="skills-icon-link">
-                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                        <span class="skills-icon-link" aria-label={label}>
+                          {mark}
                         </span>
-                      )
-                    )}
+                      );
+                    })}
                   </div>
                 </div>
               ))
