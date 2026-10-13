@@ -294,6 +294,7 @@ export const en: Dictionary = {
     tabs: [
       { id: 'FRONTEND', label: 'FRONTEND' },
       { id: 'BACKEND', label: 'BACKEND' },
+      { id: 'IA', label: 'AI / LLMS' },
       { id: 'HERRAMIENTAS', label: 'TOOLS' },
       { id: 'APRENDIENDO', label: 'LEARNING' },
     ],

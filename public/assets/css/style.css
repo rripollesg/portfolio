@@ -1458,6 +1458,13 @@ body.portfolio-modal-open {
   vertical-align: middle;
 }
 
+.skills .skill-icon.fa-solid,
+.skills .skill-icon.fa-brands,
+.skills .skill-icon.fab {
+  color: var(--color-primary);
+  padding: 0.35rem;
+}
+
 @media (max-width: 575.98px) {
   .skills .nav-tabs .nav-link {
     font-size: 0.8rem;

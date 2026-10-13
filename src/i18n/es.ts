@@ -301,6 +301,7 @@ export const es: Dictionary = {
     tabs: [
       { id: 'FRONTEND', label: 'FRONTEND' },
       { id: 'BACKEND', label: 'BACKEND' },
+      { id: 'IA', label: 'IA / LLMS' },
       { id: 'HERRAMIENTAS', label: 'HERRAMIENTAS' },
       { id: 'APRENDIENDO', label: 'APRENDIENDO' },
     ],
@@ -315,6 +316,11 @@ export const es: Dictionary = {
         { href: 'https://www.mongodb.com/', iconClass: 'devicon-mongodb-plain-wordmark colored' },
         { href: 'https://www.mysql.com/', iconClass: 'devicon-mysql-plain-wordmark' },
         { iconClass: 'devicon-redis-plain-wordmark colored' },
+      ],
+      IA: [
+        { href: 'https://www.python.org/', iconClass: 'devicon-python-plain-wordmark colored', label: 'Python' },
+        { href: 'https://openai.com/', iconClass: 'fa-solid fa-robot', label: 'OpenAI / LLMs' },
+        { href: 'https://jupyter.org/', iconClass: 'devicon-jupyter-plain-wordmark colored', label: 'Jupyter' },
       ],
       HERRAMIENTAS: [
         { href: 'https://www.docker.com/', iconClass: 'devicon-docker-plain-wordmark colored' },

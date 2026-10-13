@@ -33,6 +33,7 @@ export type PortfolioProject = {
 export type SkillIcon = {
   href?: string;
   iconClass: string;
+  label?: string;
 };
 
 export type Dictionary = {

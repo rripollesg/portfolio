@@ -52,12 +52,12 @@ const s = t.skills;
                   <div class="skills-icons-grid">
                     {(s.groups[tab.id] ?? []).map((icon) =>
                       icon.href ? (
-                        <a href={icon.href} class="skills-icon-link" aria-label={icon.iconClass}>
-                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                        <a href={icon.href} class="skills-icon-link" aria-label={icon.label ?? icon.iconClass}>
+                          <i class={`skill-icon ${icon.iconClass}`} aria-hidden="true"></i>
                         </a>
                       ) : (
-                        <span class="skills-icon-link">
-                          <i class={`skill-icon ${icon.iconClass}`}></i>
+                        <span class="skills-icon-link" aria-label={icon.label ?? icon.iconClass}>
+                          <i class={`skill-icon ${icon.iconClass}`} aria-hidden="true"></i>
                         </span>
                       )
                     )}
