@@ -323,8 +323,10 @@ export const es: Dictionary = {
         { href: 'https://cursor.com/', img: 'assets/img/skills/cursor.svg', label: 'Cursor' },
         { href: 'https://huggingface.co/', img: 'assets/img/skills/huggingface.svg', label: 'Hugging Face' },
         { href: 'https://claude.ai/', img: 'assets/img/skills/claude.svg', label: 'Claude' },
+        { href: 'https://gemini.google.com/', img: 'assets/img/skills/gemini.svg', label: 'Gemini' },
         { href: 'https://ollama.com/', img: 'assets/img/skills/ollama.svg', label: 'Ollama' },
         { href: 'https://lmstudio.ai/', img: 'assets/img/skills/lmstudio.svg', label: 'LM Studio' },
+        { href: 'https://modelcontextprotocol.io/', img: 'assets/img/skills/mcp.svg', label: 'MCP' },
       ],
       HERRAMIENTAS: [
         { href: 'https://www.docker.com/', iconClass: 'devicon-docker-plain-wordmark colored' },
