@@ -1465,6 +1465,15 @@ body.portfolio-modal-open {
   padding: 0.35rem;
 }
 
+.skills .skill-icon-img {
+  width: clamp(2rem, 8vw, 3rem);
+  height: clamp(2rem, 8vw, 3rem);
+  object-fit: contain;
+  padding: 0.3rem;
+  background: #fff;
+  box-sizing: content-box;
+}
+
 @media (max-width: 575.98px) {
   .skills .nav-tabs .nav-link {
     font-size: 0.8rem;

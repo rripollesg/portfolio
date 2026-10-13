@@ -319,8 +319,12 @@ export const es: Dictionary = {
       ],
       IA: [
         { href: 'https://www.python.org/', iconClass: 'devicon-python-plain-wordmark colored', label: 'Python' },
-        { href: 'https://openai.com/', iconClass: 'fa-solid fa-robot', label: 'OpenAI / LLMs' },
-        { href: 'https://jupyter.org/', iconClass: 'devicon-jupyter-plain-wordmark colored', label: 'Jupyter' },
+        { href: 'https://openai.com/', img: 'assets/img/skills/openai.svg', label: 'OpenAI' },
+        { href: 'https://cursor.com/', img: 'assets/img/skills/cursor.svg', label: 'Cursor' },
+        { href: 'https://huggingface.co/', img: 'assets/img/skills/huggingface.svg', label: 'Hugging Face' },
+        { href: 'https://claude.ai/', img: 'assets/img/skills/claude.svg', label: 'Claude' },
+        { href: 'https://ollama.com/', img: 'assets/img/skills/ollama.svg', label: 'Ollama' },
+        { href: 'https://lmstudio.ai/', img: 'assets/img/skills/lmstudio.svg', label: 'LM Studio' },
       ],
       HERRAMIENTAS: [
         { href: 'https://www.docker.com/', iconClass: 'devicon-docker-plain-wordmark colored' },

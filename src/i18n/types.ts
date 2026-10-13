@@ -32,7 +32,9 @@ export type PortfolioProject = {
 
 export type SkillIcon = {
   href?: string;
-  iconClass: string;
+  iconClass?: string;
+  /** Ruta relativa en public/ para logos SVG/PNG (p. ej. assets/img/skills/cursor.svg) */
+  img?: string;
   label?: string;
 };
 
