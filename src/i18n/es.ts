@@ -234,8 +234,8 @@ export const es: Dictionary = {
         title: 'Juntum',
         subtitle: 'Gestión de comunidades',
         description:
-          'App móvil para administrar comunidades de vecinos: incidencias, reservas de espacios, documentos, cuotas y derramas, presupuesto, vencimientos, tablón de anuncios, juntas y directorio de vecinos, con módulos activables y portal para residentes.',
-        tech: ['Flutter', 'Dart'],
+          'PWA con Next.js para administrar comunidades de vecinos: incidencias, reservas de espacios, documentos, cuotas y derramas, presupuesto, vencimientos, tablón de anuncios, juntas y directorio de vecinos, con módulos activables y portal para residentes.',
+        tech: ['Next.js', 'PWA'],
         layout: 'phone',
         cover: 'assets/img/juntum/juntum-incidencias.webp',
         gallery: [
