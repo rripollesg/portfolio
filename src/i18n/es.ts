@@ -229,6 +229,28 @@ export const es: Dictionary = {
         demo: 'assets/img/pills/pills-med.mp4?v=2',
       },
       {
+        filter: 'filter-app',
+        badge: 'Apps',
+        title: 'Juntum',
+        subtitle: 'Gestión de comunidades',
+        description:
+          'App móvil para administrar comunidades de vecinos: incidencias, reservas de espacios, documentos, cuotas y derramas, presupuesto, vencimientos, tablón de anuncios, juntas y directorio de vecinos, con módulos activables y portal para residentes.',
+        tech: ['Flutter', 'Dart'],
+        layout: 'phone',
+        cover: 'assets/img/juntum/juntum-incidencias.webp',
+        gallery: [
+          'assets/img/juntum/juntum-incidencias.webp',
+          'assets/img/juntum/juntum-vecinos.webp',
+          'assets/img/juntum/juntum-juntas.webp',
+          'assets/img/juntum/juntum-tablon.webp',
+          'assets/img/juntum/juntum-reservas.webp',
+          'assets/img/juntum/juntum-documentos.webp',
+          'assets/img/juntum/juntum-cuotas.webp',
+          'assets/img/juntum/juntum-presupuesto.webp',
+          'assets/img/juntum/juntum-vencimientos.webp',
+        ],
+      },
+      {
         filter: 'filter-web',
         badge: 'Web',
         title: 'Ladmin Panel',

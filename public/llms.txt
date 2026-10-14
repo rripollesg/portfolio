@@ -26,6 +26,7 @@
 ## Projects
 
 - Pills: Flutter health app (medications, vitals, clinical diary)
+- Juntum: Flutter app for homeowners associations (incidents, fees, meetings, bookings)
 - Ladmin Panel: Laravel admin (tickets, appointments, clock-in, CRM, marketing)
 - AnswerLift: WordPress plugin for SEO, GEO (llms.txt) and AEO
 - Virtual Assistant WordPress: voice assistant with AI providers
