@@ -22,7 +22,7 @@ Q: Where has he worked recently?
 A: Tich Consulting (ASISA Group) as database consultant/parameterization; previously Laberit as HIS implementer and Sothis as consultant for multi-hospital deployments in Comunidad Valenciana.
 
 Q: What notable projects has he built?
-A: Pills (Flutter health app), Ladmin Panel (Laravel admin suite), AnswerLift (WordPress SEO/GEO/AEO plugin), and a WordPress voice virtual assistant with AI providers.
+A: Pills (Flutter health app), Juntum (Flutter community/HOA management app), Ladmin Panel (Laravel admin suite), AnswerLift (WordPress SEO/GEO/AEO plugin), and a WordPress voice virtual assistant with AI providers.
 
 ## Professional experience (summary)
 

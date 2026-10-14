@@ -222,6 +222,28 @@ export const en: Dictionary = {
         demo: 'assets/img/pills/pills-med.mp4?v=2',
       },
       {
+        filter: 'filter-app',
+        badge: 'Apps',
+        title: 'Juntum',
+        subtitle: 'Community management',
+        description:
+          'Mobile app to manage homeowners associations: incidents, common-area bookings, documents, fees and special assessments, budget, deadlines, bulletin board, meetings and neighbor directory, with toggleable modules and a resident portal.',
+        tech: ['Flutter', 'Dart'],
+        layout: 'phone',
+        cover: 'assets/img/juntum/juntum-incidencias.webp',
+        gallery: [
+          'assets/img/juntum/juntum-incidencias.webp',
+          'assets/img/juntum/juntum-vecinos.webp',
+          'assets/img/juntum/juntum-juntas.webp',
+          'assets/img/juntum/juntum-tablon.webp',
+          'assets/img/juntum/juntum-reservas.webp',
+          'assets/img/juntum/juntum-documentos.webp',
+          'assets/img/juntum/juntum-cuotas.webp',
+          'assets/img/juntum/juntum-presupuesto.webp',
+          'assets/img/juntum/juntum-vencimientos.webp',
+        ],
+      },
+      {
         filter: 'filter-web',
         badge: 'Web',
         title: 'Ladmin Panel',
