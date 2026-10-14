@@ -227,8 +227,8 @@ export const en: Dictionary = {
         title: 'Juntum',
         subtitle: 'Community management',
         description:
-          'Mobile app to manage homeowners associations: incidents, common-area bookings, documents, fees and special assessments, budget, deadlines, bulletin board, meetings and neighbor directory, with toggleable modules and a resident portal.',
-        tech: ['Flutter', 'Dart'],
+          'Next.js PWA to manage homeowners associations: incidents, common-area bookings, documents, fees and special assessments, budget, deadlines, bulletin board, meetings and neighbor directory, with toggleable modules and a resident portal.',
+        tech: ['Next.js', 'PWA'],
         layout: 'phone',
         cover: 'assets/img/juntum/juntum-incidencias.webp',
         gallery: [
