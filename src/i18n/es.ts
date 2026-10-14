@@ -320,7 +320,6 @@ export const es: Dictionary = {
       IA: [
         { href: 'https://www.python.org/', iconClass: 'devicon-python-plain-wordmark colored', label: 'Python' },
         { href: 'https://openai.com/', img: 'assets/img/skills/openai.svg', label: 'OpenAI' },
-        { href: 'https://cursor.com/', img: 'assets/img/skills/cursor.svg', label: 'Cursor' },
         { href: 'https://huggingface.co/', img: 'assets/img/skills/huggingface.svg', label: 'Hugging Face' },
         { href: 'https://claude.ai/', img: 'assets/img/skills/claude.svg', label: 'Claude' },
         { href: 'https://gemini.google.com/', img: 'assets/img/skills/gemini.svg', label: 'Gemini' },
@@ -334,6 +333,7 @@ export const es: Dictionary = {
         { iconClass: 'devicon-npm-original-wordmark colored' },
         { href: 'https://www.atlassian.com/es/software/jira', iconClass: 'devicon-jira-plain-wordmark colored' },
         { href: 'https://code.visualstudio.com/', iconClass: 'devicon-vscode-plain colored' },
+        { href: 'https://cursor.com/', img: 'assets/img/skills/cursor.svg', label: 'Cursor' },
         { iconClass: 'fa-brands fa-linux' },
         { iconClass: 'fab fa-joomla' },
         { iconClass: 'devicon-wordpress-plain-wordmark colored' },
